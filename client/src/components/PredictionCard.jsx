@@ -9,10 +9,10 @@ const PredictionCard = ({ result }) => {
   const malignantConf = Math.round((result.confidence?.Malignant || 0) * 1000) / 10;
 
   return (
-    <div className={`rounded-2xl p-6 sm:p-8 transition-all duration-500 bg-bio-card border ${
+    <div className={`rounded-2xl p-6 sm:p-8 transition-all duration-300 bg-bio-card border ${
       isMalignant
-        ? 'border-rose-500/50 shadow-2xl shadow-rose-950/40 bg-gradient-to-b from-[var(--bg-card-solid)] to-rose-950/30'
-        : 'border-[var(--border-teal-strong)] glow-teal bg-gradient-to-b from-[var(--bg-card-solid)] to-[var(--accent-teal-dark)]/30'
+        ? 'border-rose-500/60 bg-gradient-to-b from-[var(--bg-card-solid)] to-rose-950/30'
+        : 'border-[var(--border-teal-strong)] bg-gradient-to-b from-[var(--bg-card-solid)] to-[var(--accent-teal-dark)]/30'
     }`}>
       
       {/* 1. Alert Banner */}
@@ -56,15 +56,15 @@ const PredictionCard = ({ result }) => {
         <div className="w-full h-5 bg-[var(--bg-main)] rounded-full overflow-hidden flex p-0.5 border border-slate-700">
           <div
             style={{ width: `${benignConf}%` }}
-            className="h-full bg-gradient-to-r from-[#00bfa5] to-[var(--accent-teal)] rounded-l-full transition-all duration-700 flex items-center justify-end pr-2"
+            className="h-full bg-[#00e5ce] rounded-l-full transition-all duration-500 flex items-center justify-end pr-2 text-slate-950"
           >
-            {benignConf > 15 && <span className="text-[10px] font-bold text-slate-950">{benignConf}%</span>}
+            {benignConf > 15 && <span className="text-[10px] font-bold">{benignConf}%</span>}
           </div>
           <div
             style={{ width: `${malignantConf}%` }}
-            className="h-full bg-gradient-to-r from-rose-500 to-rose-700 rounded-r-full transition-all duration-700 flex items-center justify-start pl-2"
+            className="h-full bg-rose-500 rounded-r-full transition-all duration-500 flex items-center justify-start pl-2 text-white"
           >
-            {malignantConf > 15 && <span className="text-[10px] font-bold text-white">{malignantConf}%</span>}
+            {malignantConf > 15 && <span className="text-[10px] font-bold">{malignantConf}%</span>}
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const PredictionCard = ({ result }) => {
               <span className="text-xs text-[var(--accent-teal)] font-semibold uppercase">Benign Probability</span>
               <p className="text-2xl font-display font-extrabold text-white">{benignConf}%</p>
             </div>
-            <div className="w-3 h-3 rounded-full bg-[var(--accent-teal)] animate-pulse"></div>
+            <div className="w-3 h-3 rounded-full bg-[var(--accent-teal)]"></div>
           </div>
           
           <div className="bg-rose-950/40 border border-rose-500/30 rounded-lg p-3 flex items-center justify-between">
@@ -82,7 +82,7 @@ const PredictionCard = ({ result }) => {
               <span className="text-xs text-rose-300 font-semibold uppercase">Malignant Probability</span>
               <p className="text-2xl font-display font-extrabold text-rose-200">{malignantConf}%</p>
             </div>
-            <div className="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></div>
+            <div className="w-3 h-3 rounded-full bg-rose-500"></div>
           </div>
         </div>
       </div>

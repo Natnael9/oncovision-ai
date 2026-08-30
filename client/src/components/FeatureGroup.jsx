@@ -94,7 +94,7 @@ const FeatureGroup = ({ features, onChange }) => {
               onClick={() => setActiveTab(cat.id)}
               className={`px-3.5 py-2 rounded-lg font-display text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 activeTab === cat.id
-                  ? 'bg-[var(--accent-teal)] text-slate-950 shadow-md font-bold'
+                  ? 'bg-[var(--accent-teal)] text-slate-950 font-bold'
                   : 'text-slate-300 hover:text-white hover:bg-[var(--bg-main)]'
               }`}
             >

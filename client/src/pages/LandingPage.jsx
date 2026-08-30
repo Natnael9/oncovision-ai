@@ -62,13 +62,13 @@ const LandingPage = () => {
 
           </div>
 
-          {/* Right Hero 3D Molecular Graphics */}
+          {/* Right Hero Graphics */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[var(--border-teal-strong)] p-2 shadow-2xl glow-teal">
+            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[var(--border-teal-strong)] p-2">
               <img
                 src={heroBanner}
                 alt="OncoVision AI Pathology Engine Graphic"
-                className="w-full h-auto rounded-xl object-cover transform hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-auto rounded-xl object-cover transform hover:scale-[1.01] transition-transform duration-300"
               />
             </div>
           </div>
@@ -163,7 +163,7 @@ const LandingPage = () => {
 
       {/* Call-to-Action Footer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[var(--accent-teal-dark)] via-[#162d33] to-[var(--bg-main)] p-8 sm:p-12 border border-[var(--border-teal-strong)] text-center space-y-6 shadow-2xl">
+        <div className="rounded-3xl bg-[var(--accent-teal-dark)] p-8 sm:p-12 border border-[var(--border-teal-strong)] text-center space-y-6">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
             Ready to Test Live Cytometric Inference?
           </h2>

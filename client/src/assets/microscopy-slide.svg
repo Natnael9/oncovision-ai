@@ -6,10 +6,6 @@
       <stop offset="85%" stop-color="#0b171a" />
       <stop offset="100%" stop-color="#060c0e" />
     </radialGradient>
-    <filter id="glowTeal" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <rect width="800" height="500" fill="#14252a" rx="12"/>
@@ -30,7 +26,7 @@
 
   <!-- Center Active Microscope Viewport -->
   <g transform="translate(400, 250)">
-    <circle r="130" fill="#0f1d21" stroke="#00e5ce" stroke-width="3" filter="url(#glowTeal)" />
+    <circle r="130" fill="#0f1d21" stroke="#00e5ce" stroke-width="3" />
     
     <!-- Crosshairs -->
     <line x1="-130" y1="0" x2="130" y2="0" stroke="#00e5ce" stroke-width="1" stroke-dasharray="4,4" opacity="0.5" />

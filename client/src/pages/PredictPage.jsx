@@ -126,7 +126,7 @@ const PredictPage = () => {
             <button
               type="button"
               onClick={handleReset}
-              className="px-3.5 py-2.5 rounded-xl bg-[#050b0c] border border-slate-700 text-slate-400 hover:text-white text-xs font-semibold transition-all flex items-center space-x-1.5"
+              className="px-3.5 py-2.5 rounded-xl bg-[#0f1d21] border border-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center space-x-1.5"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>Reset Form</span>

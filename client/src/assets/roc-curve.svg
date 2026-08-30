@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%" style="background: #081012;">
-  <rect width="600" height="450" fill="#081012" rx="12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%" style="background: #14252a;">
+  <rect width="600" height="450" fill="#14252a" rx="12"/>
   
   <text x="300" y="40" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" text-anchor="middle">Receiver Operating Characteristic (ROC) Curve</text>
   <text x="300" y="65" fill="#00e5ce" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" text-anchor="middle">Random Forest Classifier AUC = 0.99</text>
 
   <!-- Plot Axes -->
   <g transform="translate(80, 80)">
-    <line x1="0" y1="0" x2="440" y2="0" stroke="#16282b" stroke-width="1" />
-    <line x1="0" y1="70" x2="440" y2="70" stroke="#16282b" stroke-width="1" />
-    <line x1="0" y1="140" x2="440" y2="140" stroke="#16282b" stroke-width="1" />
-    <line x1="0" y1="210" x2="440" y2="210" stroke="#16282b" stroke-width="1" />
+    <line x1="0" y1="0" x2="440" y2="0" stroke="#2a454d" stroke-width="1" />
+    <line x1="0" y1="70" x2="440" y2="70" stroke="#2a454d" stroke-width="1" />
+    <line x1="0" y1="140" x2="440" y2="140" stroke="#2a454d" stroke-width="1" />
+    <line x1="0" y1="210" x2="440" y2="210" stroke="#2a454d" stroke-width="1" />
     <line x1="0" y1="280" x2="440" y2="280" stroke="#00e5ce" stroke-width="1.5" />
 
     <line x1="0" y1="0" x2="0" y2="280" stroke="#00e5ce" stroke-width="1.5" />
 
     <!-- Chance Diagonal -->
-    <line x1="0" y1="280" x2="440" y2="0" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,4" />
+    <line x1="0" y1="280" x2="440" y2="0" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4" />
 
     <!-- ROC Curve (AUC 0.99) -->
     <path d="M 0 280 Q 5 20 40 8 T 440 0" fill="none" stroke="#00e5ce" stroke-width="3.5" />
-    <path d="M 0 280 Q 5 20 40 8 T 440 0 L 440 280 Z" fill="rgba(0, 229, 206, 0.15)" />
+    <path d="M 0 280 Q 5 20 40 8 T 440 0 L 440 280 Z" fill="rgba(0, 229, 206, 0.2)" />
 
     <!-- Legend Badge -->
     <g transform="translate(240, 160)">
-      <rect x="0" y="0" width="180" height="50" rx="6" fill="#042a2d" stroke="#00e5ce" stroke-width="1" />
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#0d4044" stroke="#00e5ce" stroke-width="1" />
       <line x1="15" y1="25" x2="45" y2="25" stroke="#00e5ce" stroke-width="3" />
       <text x="55" y="22" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">Random Forest</text>
       <text x="55" y="38" fill="#00e5ce" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600">AUC = 0.99</text>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, RefreshCw, AlertCircle, CheckCircle2, Sparkles, Loader2, Play } from 'lucide-react';
+import { Cpu, RefreshCw, AlertCircle, CheckCircle2, Loader2, Play } from 'lucide-react';
 import FeatureGroup from '../components/FeatureGroup';
 import PredictionCard from '../components/PredictionCard';
 
@@ -21,7 +21,6 @@ const PredictPage = () => {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
-  // Default auto-load benign preset on initial render for smooth UX
   useEffect(() => {
     handleLoadBenign();
   }, []);
@@ -52,7 +51,6 @@ const PredictPage = () => {
     e.preventDefault();
     setError(null);
 
-    // Validate inputs
     const numericFeatures = features.map((f) => parseFloat(f));
     const hasNaN = numericFeatures.some((val) => isNaN(val));
 
@@ -86,18 +84,18 @@ const PredictPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 font-sans">
       
       {/* Header & Presets Bar */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+      <div className="bg-bio-card rounded-3xl p-6 sm:p-8 border border-[#00e5ce]/20 space-y-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           
           <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-2">
-              <Cpu className="w-4 h-4 text-cyan-400" />
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00e5ce]/10 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider mb-2">
+              <Cpu className="w-4 h-4 text-[#00e5ce]" />
               <span>Interactive Pathology Laboratory</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
+            <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
               Diagnostic Classifier Predictor
             </h1>
             <p className="text-sm text-slate-300 mt-1 max-w-2xl">
@@ -110,7 +108,7 @@ const PredictPage = () => {
             <button
               type="button"
               onClick={handleLoadMalignant}
-              className="px-4 py-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 text-xs font-bold transition-all flex items-center space-x-2 shadow-sm"
+              className="px-4 py-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 text-xs font-display font-bold transition-all flex items-center space-x-2 shadow-sm"
             >
               <AlertCircle className="w-4 h-4 text-rose-400" />
               <span>Load Malignant Sample</span>
@@ -119,16 +117,16 @@ const PredictPage = () => {
             <button
               type="button"
               onClick={handleLoadBenign}
-              className="px-4 py-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/30 text-xs font-bold transition-all flex items-center space-x-2 shadow-sm"
+              className="px-4 py-2.5 rounded-xl bg-[#00e5ce]/20 border border-[#00e5ce]/40 text-[#00e5ce] hover:bg-[#00e5ce]/30 text-xs font-display font-bold transition-all flex items-center space-x-2 shadow-sm"
             >
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-[#00e5ce]" />
               <span>Load Benign Sample</span>
             </button>
 
             <button
               type="button"
               onClick={handleReset}
-              className="px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-400 hover:text-white hover:bg-slate-700 text-xs font-semibold transition-all flex items-center space-x-1.5"
+              className="px-3.5 py-2.5 rounded-xl bg-[#050b0c] border border-slate-700 text-slate-400 hover:text-white text-xs font-semibold transition-all flex items-center space-x-1.5"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>Reset Form</span>
@@ -138,13 +136,11 @@ const PredictPage = () => {
         </div>
       </div>
 
-      {/* Main Diagnostic Form */}
+      {/* Main Form */}
       <form onSubmit={handleSubmit} className="space-y-8">
         
-        {/* 30-Feature Input Matrix */}
         <FeatureGroup features={features} onChange={handleInputChange} />
 
-        {/* Error Alert Message */}
         {error && (
           <div className="rounded-xl p-4 bg-rose-950/60 border border-rose-500/50 text-rose-200 text-sm flex items-center space-x-3">
             <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />
@@ -152,30 +148,25 @@ const PredictPage = () => {
           </div>
         )}
 
-        {/* Action Trigger Button */}
         <div className="flex justify-center pt-2">
           <button
             type="submit"
             disabled={loading}
-            className="w-full sm:w-auto px-12 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-extrabold text-base hover:from-cyan-400 hover:to-indigo-500 transition-all shadow-xl shadow-cyan-500/20 disabled:opacity-50 flex items-center justify-center space-x-3 cursor-pointer"
+            className="btn-nightingale disabled:opacity-50 cursor-pointer"
           >
-            {loading ? (
-              <>
-                <Loader2 className="w-6 h-6 animate-spin text-white" />
-                <span>Executing Python Inference Bridge...</span>
-              </>
-            ) : (
-              <>
-                <Play className="w-5 h-5 fill-current" />
-                <span>Run Diagnostic Analysis</span>
-              </>
-            )}
+            <span className="btn-nightingale-text">
+              {loading ? <Loader2 className="w-5 h-5 animate-spin text-[#00e5ce]" /> : <Play className="w-5 h-5 text-[#00e5ce] fill-current" />}
+              <span>{loading ? 'Executing Subprocess...' : 'Run Diagnostic Analysis'}</span>
+            </span>
+            <span className="btn-nightingale-icon">
+              <Play className="w-4 h-4 fill-current" />
+            </span>
           </button>
         </div>
 
       </form>
 
-      {/* Results Display Card */}
+      {/* Results Display */}
       {result && (
         <div className="pt-6">
           <PredictionCard result={result} />

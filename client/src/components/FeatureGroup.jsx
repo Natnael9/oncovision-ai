@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, Info, Layers } from 'lucide-react';
+import { HelpCircle, Layers } from 'lucide-react';
 
 const FEATURE_DESCRIPTIONS = {
   "mean radius": "Mean of distances from nuclear center to perimeter points (µm).",
@@ -73,29 +73,29 @@ const FeatureGroup = ({ features, onChange }) => {
   const currentCategory = CATEGORIES.find(c => c.id === activeTab);
 
   return (
-    <div className="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 backdrop-blur-md">
+    <div className="bg-bio-card rounded-2xl p-6 border border-[#00e5ce]/15">
       
       {/* Category Tabs Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
         <div>
-          <h3 className="font-extrabold text-lg text-white flex items-center gap-2">
-            <Layers className="w-5 h-5 text-cyan-400" />
+          <h3 className="font-display font-bold text-lg text-white flex items-center gap-2">
+            <Layers className="w-5 h-5 text-[#00e5ce]" />
             30 Nuclear Morphometric Input Matrix
           </h3>
           <p className="text-xs text-slate-400">Derived from digitized Fine Needle Aspiration (FNA) cell nuclei images</p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center space-x-1 bg-slate-950 p-1 rounded-xl border border-slate-800 w-full sm:w-auto overflow-x-auto">
+        <div className="flex items-center space-x-1 bg-[#050b0c] p-1 rounded-xl border border-slate-800 w-full sm:w-auto overflow-x-auto">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               type="button"
               onClick={() => setActiveTab(cat.id)}
-              className={`px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
+              className={`px-3.5 py-2 rounded-lg font-display text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 activeTab === cat.id
-                  ? 'bg-cyan-500 text-slate-950 shadow-md font-bold'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                  ? 'bg-[#00e5ce] text-slate-950 shadow-md font-bold'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-[#091214]'
               }`}
             >
               {cat.id === 'mean' ? 'Mean (1-10)' : cat.id === 'se' ? 'Std Error (11-20)' : 'Worst (21-30)'}
@@ -105,12 +105,12 @@ const FeatureGroup = ({ features, onChange }) => {
       </div>
 
       {/* Category Description Banner */}
-      <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 mb-6">
-        <h4 className="font-bold text-sm text-cyan-300 mb-0.5">{currentCategory.title}</h4>
+      <div className="bg-[#050b0c] border border-[#00e5ce]/15 rounded-xl p-4 mb-6">
+        <h4 className="font-display font-bold text-sm text-[#00e5ce] mb-0.5">{currentCategory.title}</h4>
         <p className="text-xs text-slate-400">{currentCategory.subtitle}</p>
       </div>
 
-      {/* 10 Inputs Grid for Active Category */}
+      {/* 10 Inputs Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {currentCategory.indices.map((idx) => {
           const name = FEATURE_NAMES[idx];
@@ -120,8 +120,8 @@ const FeatureGroup = ({ features, onChange }) => {
           return (
             <div
               key={idx}
-              className={`relative bg-slate-950/60 rounded-xl p-3.5 border transition-all duration-200 ${
-                isWorst ? 'border-slate-800 hover:border-rose-500/40' : 'border-slate-800 hover:border-cyan-500/40'
+              className={`relative bg-[#050b0c] rounded-xl p-3.5 border transition-all duration-200 ${
+                isWorst ? 'border-slate-800 hover:border-rose-500/40' : 'border-slate-800 hover:border-[#00e5ce]/40'
               }`}
             >
               <div className="flex items-center justify-between mb-1.5">
@@ -129,22 +129,22 @@ const FeatureGroup = ({ features, onChange }) => {
                   #{idx + 1} {name}
                 </label>
                 
-                {/* Tooltip Icon & Popup */}
+                {/* Tooltip */}
                 <div className="relative">
                   <button
                     type="button"
                     onMouseEnter={() => setActiveTooltip(idx)}
                     onMouseLeave={() => setActiveTooltip(null)}
                     onClick={() => setActiveTooltip(activeTooltip === idx ? null : idx)}
-                    className="text-slate-500 hover:text-cyan-400 p-0.5"
+                    className="text-slate-500 hover:text-[#00e5ce] p-0.5"
                     aria-label={`Info for ${name}`}
                   >
                     <HelpCircle className="w-3.5 h-3.5" />
                   </button>
 
                   {activeTooltip === idx && (
-                    <div className="absolute right-0 bottom-full mb-2 w-56 p-3 bg-slate-900 border border-cyan-500/40 text-slate-200 text-xs rounded-xl shadow-xl z-50 pointer-events-none">
-                      <p className="font-bold text-cyan-400 mb-1 capitalize">{name}</p>
+                    <div className="absolute right-0 bottom-full mb-2 w-56 p-3 bg-[#091214] border border-[#00e5ce]/40 text-slate-200 text-xs rounded-xl shadow-xl z-50 pointer-events-none">
+                      <p className="font-display font-bold text-[#00e5ce] mb-1 capitalize">{name}</p>
                       <p className="text-[11px] leading-relaxed text-slate-300">{FEATURE_DESCRIPTIONS[name]}</p>
                     </div>
                   )}
@@ -158,7 +158,7 @@ const FeatureGroup = ({ features, onChange }) => {
                 value={val}
                 onChange={(e) => onChange(idx, e.target.value)}
                 placeholder="0.0"
-                className="w-full bg-slate-900 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-white font-mono placeholder-slate-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                className="w-full bg-[#091214] border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-white font-mono placeholder-slate-600 focus:outline-none focus:border-[#00e5ce] focus:ring-1 focus:ring-[#00e5ce] transition-colors"
               />
             </div>
           );

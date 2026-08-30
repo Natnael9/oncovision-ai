@@ -14,14 +14,14 @@
 
   <rect width="800" height="500" fill="#081012" rx="12"/>
 
-  <!-- Left 3D Cell Sphere (Nightingale Image 2 Inspiration) -->
+  <!-- Left 3D Cell Sphere Viewport -->
   <g transform="translate(100, 250)">
     <circle r="180" fill="url(#cellSphere3D)" stroke="#00e5ce" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6" />
     <circle r="140" fill="none" stroke="#00e5ce" stroke-width="1" opacity="0.3" />
     <circle r="90" fill="none" stroke="#00e5ce" stroke-width="1" opacity="0.2" />
   </g>
 
-  <!-- Right 3D Cell Sphere (Nightingale Image 2 Inspiration) -->
+  <!-- Right 3D Cell Sphere Viewport -->
   <g transform="translate(700, 250)">
     <circle r="180" fill="url(#cellSphere3D)" stroke="#00e5ce" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6" />
     <circle r="140" fill="none" stroke="#00e5ce" stroke-width="1" opacity="0.3" />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mail, MapPin, Smartphone, Menu, X, Cpu, Activity, GitMerge, FileText } from 'lucide-react';
+import { Mail, MapPin, Menu, X, Cpu, Activity } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,19 +20,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Nightingale Style Pixel Grid Logo */}
+          {/* OncoVision AI Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            {/* Modular Pixel Blocks (Matching Nightingale Logo) */}
-            <div className="w-8 h-8 grid grid-cols-2 gap-0.5 shrink-0">
-              <div className="bg-white rounded-[1px]"></div>
-              <div className="bg-[#00e5ce] rounded-[1px]"></div>
-              <div className="bg-[#00e5ce] rounded-[1px]"></div>
-              <div className="bg-white rounded-[1px]"></div>
+            <div className="w-10 h-10 rounded-xl bg-[#042a2d] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce] group-hover:bg-[#00e5ce] group-hover:text-[#051416] transition-all">
+              <Activity className="w-5 h-5" />
             </div>
 
             <div className="flex flex-col">
-              <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-[#00e5ce] transition-colors flex items-center gap-1.5">
-                oncovision <span className="text-[#00e5ce] font-extrabold">AI 4.0</span>
+              <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-[#00e5ce] transition-colors">
+                OncoVision <span className="text-[#00e5ce] font-extrabold">AI</span>
               </span>
             </div>
           </Link>
@@ -57,7 +53,7 @@ const Navbar = () => {
             })}
           </nav>
 
-          {/* Right Action Wireframe Icon Boxes (Matching Nightingale Header) */}
+          {/* Right Wireframe Icon Action Boxes */}
           <div className="hidden lg:flex items-center space-x-2">
             <Link
               to="/predict"

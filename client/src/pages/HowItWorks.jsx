@@ -24,7 +24,7 @@ const HowItWorks = () => {
       <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[#00e5ce]/20 text-center space-y-4">
         <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#00e5ce]/10 border border-[#00e5ce]/30 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider">
           <GitMerge className="w-4 h-4 text-[#00e5ce]" />
-          <span>Nightingale AI Pipeline</span>
+          <span>Pathology Extraction Pipeline</span>
         </div>
         <h1 className="font-display text-3xl sm:text-5xl font-extrabold text-white">
           From Fine Needle Biopsy to 30 Features

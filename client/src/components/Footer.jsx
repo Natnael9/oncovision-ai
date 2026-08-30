@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldAlert, ExternalLink } from 'lucide-react';
+import { ShieldAlert, ExternalLink, Activity } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto flex items-start sm:items-center space-x-3 text-[#00e5ce] text-xs sm:text-sm">
           <ShieldAlert className="w-5 h-5 shrink-0 mt-0.5 sm:mt-0" />
           <p className="text-slate-300">
-            <strong className="font-semibold text-[#00e5ce]">Academic &amp; Research Disclaimer:</strong> This Nightingale-inspired application serves academic benchmark models for Wisconsin Diagnostic Breast Cancer classification. It is not certified for standalone clinical diagnostic decisions.
+            <strong className="font-semibold text-[#00e5ce]">Academic &amp; Research Disclaimer:</strong> This application serves benchmark models for Wisconsin Diagnostic Breast Cancer classification. It is not certified for standalone clinical diagnostic decisions.
           </p>
         </div>
       </div>
@@ -22,16 +22,13 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-7 h-7 grid grid-cols-2 gap-0.5 shrink-0">
-                <div className="bg-white rounded-[1px]"></div>
-                <div className="bg-[#00e5ce] rounded-[1px]"></div>
-                <div className="bg-[#00e5ce] rounded-[1px]"></div>
-                <div className="bg-white rounded-[1px]"></div>
+              <div className="w-8 h-8 rounded-lg bg-[#042a2d] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
+                <Activity className="w-4 h-4" />
               </div>
-              <span className="font-display font-bold text-xl text-white">oncovision AI 4.0</span>
+              <span className="font-display font-bold text-xl text-white">OncoVision AI</span>
             </div>
             <p className="text-sm text-slate-400 max-w-md leading-relaxed">
-              Nightingale AI biotech architecture quantifying 30 Fine Needle Aspiration (FNA) nuclear morphometrics via Random Forest ensembles.
+              Serving real-time machine learning predictions using 30 digitized Fine Needle Aspiration (FNA) nuclear morphometrics trained on Random Forest Ensembles.
             </p>
           </div>
 
@@ -66,8 +63,8 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
-          <p>© {new Date().getFullYear()} OncoVision AI 4.0 Pathology Engine.</p>
-          <p>Theme Inspired by Nightingale AI Biotech UI.</p>
+          <p>© {new Date().getFullYear()} OncoVision AI Pathology Assistant. MERN Stack &amp; Python Architecture.</p>
+          <p>Powered by Scikit-Learn, Express, React, and Tailwind CSS.</p>
         </div>
       </div>
     </footer>

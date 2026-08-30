@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, GitMerge, ShieldCheck, Microscope, LineChart, ArrowUpRight, Zap, CheckCircle2 } from 'lucide-react';
+import { Cpu, GitMerge, ShieldCheck, Microscope, LineChart, ArrowUpRight, Zap } from 'lucide-react';
 import heroBanner from '../assets/hero-banner.svg';
 
 const LandingPage = () => {
@@ -17,10 +17,10 @@ const LandingPage = () => {
             {/* Badge Tag */}
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#00e5ce]/10 border border-[#00e5ce]/30 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider">
               <Zap className="w-4 h-4 text-[#00e5ce] animate-pulse" />
-              <span>Nightingale AI Pathology 4.0</span>
+              <span>AI-Powered Pathology Assistant</span>
             </div>
 
-            {/* Main Headline (Nightingale Style Space Grotesk Font) */}
+            {/* Main Headline */}
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
               Precision Breast Cancer <span className="gradient-text-teal">Diagnostics</span>
             </h1>
@@ -30,21 +30,19 @@ const LandingPage = () => {
               Transforming raw Fine Needle Aspiration (FNA) nuclear morphometrics into instant malignant vs. benign diagnostic predictions using Random Forest ensembles trained on the Wisconsin Clinical dataset.
             </p>
 
-            {/* Nightingale Split Action Button + Wireframe Button */}
+            {/* Action Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               
-              {/* Primary Split Button */}
-              <Link to="/predict" className="btn-nightingale group">
-                <span className="btn-nightingale-text">
+              <Link to="/predict" className="btn-split-primary group">
+                <span className="btn-split-primary-text">
                   <Cpu className="w-5 h-5 text-[#00e5ce]" />
                   <span>Launch Diagnostic Predictor</span>
                 </span>
-                <span className="btn-nightingale-icon">
+                <span className="btn-split-primary-icon">
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </Link>
 
-              {/* Secondary Wireframe Button */}
               <Link to="/how-it-works" className="btn-wireframe flex items-center space-x-2">
                 <GitMerge className="w-5 h-5 text-[#00e5ce]" />
                 <span>Our Science &amp; Pipeline</span>
@@ -75,7 +73,7 @@ const LandingPage = () => {
             <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[#00e5ce]/20 p-2 shadow-2xl glow-teal">
               <img
                 src={heroBanner}
-                alt="Nightingale AI Pathology Engine Graphic"
+                alt="OncoVision AI Pathology Engine Graphic"
                 className="w-full h-auto rounded-xl object-cover transform hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
@@ -95,10 +93,9 @@ const LandingPage = () => {
           </p>
         </div>
 
-        {/* 3 Distinct Feature Cards */}
+        {/* 3 Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Card 1 */}
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
             <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
               <Microscope className="w-6 h-6" />
@@ -109,7 +106,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Card 2 */}
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
             <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
               <LineChart className="w-6 h-6" />
@@ -120,7 +116,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Card 3 */}
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
             <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
               <ShieldCheck className="w-6 h-6" />
@@ -182,12 +177,12 @@ const LandingPage = () => {
             Input custom 30-feature values or load pre-set malignant/benign clinical samples to observe real-time pathology predictions.
           </p>
           <div className="pt-2 flex justify-center">
-            <Link to="/predict" className="btn-nightingale group">
-              <span className="btn-nightingale-text">
+            <Link to="/predict" className="btn-split-primary group">
+              <span className="btn-split-primary-text">
                 <Cpu className="w-5 h-5 text-[#00e5ce]" />
                 <span>Launch Diagnostic Predictor</span>
               </span>
-              <span className="btn-nightingale-icon">
+              <span className="btn-split-primary-icon">
                 <ArrowUpRight className="w-5 h-5" />
               </span>
             </Link>

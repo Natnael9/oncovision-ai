@@ -18,7 +18,6 @@
   --accent-teal-hover: #00fff0;
   --accent-teal-dark: #0d4044;
   --accent-teal-dark-hover: #115358;
-  --accent-teal-glow: rgba(0, 229, 206, 0.25);
 
   /* Alert & Malignant Accent Colors (Rose) */
   --accent-rose: #f43f5e;
@@ -48,7 +47,7 @@
   }
 }
 
-/* Custom Bio-Tech Utility System */
+/* Custom Bio-Tech Utility System (Flat & Proper Colors, No Glows) */
 .bg-bio-main {
   background-color: var(--bg-main);
 }
@@ -61,16 +60,15 @@
 }
 
 .bg-bio-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
 }
 
 .bg-bio-card-hover:hover {
   border-color: var(--border-teal-strong);
-  box-shadow: 0 10px 30px -10px var(--accent-teal-glow);
   transform: translateY(-2px);
 }
 
-/* Electric Teal Glow Utilities */
+/* Color & Gradient Utilities */
 .text-teal-electric {
   color: var(--accent-teal);
 }
@@ -81,22 +79,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-.glow-teal {
-  box-shadow: 0 0 35px -5px var(--accent-teal-glow);
-}
-
-.glow-teal-sm {
-  box-shadow: 0 0 15px -2px var(--accent-teal-glow);
-}
-
-/* Primary Split Action Button Component */
+/* Primary Split Action Button Component (Flat, Solid Colors) */
 .btn-split-primary {
   display: inline-flex;
   align-items: center;
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 229, 206, 0.2);
+  transition: all 0.2s ease;
 }
 
 .btn-split-primary-text {
@@ -153,5 +142,5 @@
 .btn-wireframe:hover {
   border-color: var(--border-teal-strong);
   color: #ffffff;
-  background-color: var(--accent-teal-glow);
+  background-color: var(--accent-teal-dark);
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mail, MapPin, Menu, X, Cpu, Activity } from 'lucide-react';
+import { Mail, MapPin, Menu, X, Cpu } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -22,8 +23,8 @@ const Navbar = () => {
           
           {/* OncoVision AI Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-[var(--accent-teal-dark)] border border-[var(--border-teal-strong)] flex items-center justify-center text-[var(--accent-teal)] group-hover:bg-[var(--accent-teal)] group-hover:text-slate-950 transition-all">
-              <Activity className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden border border-[var(--border-teal-strong)] bg-slate-950 flex items-center justify-center group-hover:border-[var(--accent-teal)] transition-all">
+              <img src={logo} alt="OncoVision AI Logo" className="w-full h-full object-cover" />
             </div>
 
             <div className="flex flex-col">

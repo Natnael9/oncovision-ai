@@ -1,7 +1,7 @@
 import React from 'react';
-import { GitMerge, Microscope, CheckCircle } from 'lucide-react';
-import fnaProcedure from '../assets/fna-procedure.svg';
-import microscopySlide from '../assets/microscopy-slide.svg';
+import { GitMerge, CheckCircle } from 'lucide-react';
+import fnaProcedure from '../assets/fna-procedure.png';
+import microscopySlide from '../assets/microscopy-slide.png';
 
 const BASE_FEATURES = [
   { name: "Radius", formula: "r = ||p - c||", desc: "Mean distance from nuclear center to perimeter points (µm)." },
@@ -21,9 +21,9 @@ const HowItWorks = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16 font-sans">
       
       {/* Header Banner */}
-      <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[#00e5ce]/20 text-center space-y-4">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#00e5ce]/10 border border-[#00e5ce]/30 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider">
-          <GitMerge className="w-4 h-4 text-[#00e5ce]" />
+      <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[var(--border-teal)] text-center space-y-4">
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[var(--accent-teal)]/10 border border-[var(--border-teal-strong)] text-[var(--accent-teal)] text-xs font-display font-semibold uppercase tracking-wider">
+          <GitMerge className="w-4 h-4 text-[var(--accent-teal)]" />
           <span>Pathology Extraction Pipeline</span>
         </div>
         <h1 className="font-display text-3xl sm:text-5xl font-extrabold text-white">
@@ -38,10 +38,10 @@ const HowItWorks = () => {
       <div className="space-y-12">
         
         {/* Stage 1 */}
-        <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-bio-card rounded-3xl p-8 border border-[var(--border-teal)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center space-x-3">
-              <span className="w-10 h-10 rounded-xl bg-[#0d4044] text-[#00e5ce] font-display font-extrabold flex items-center justify-center text-lg border border-[#00e5ce]/30">01</span>
+              <span className="w-10 h-10 rounded-xl bg-[var(--accent-teal-dark)] text-[var(--accent-teal)] font-display font-extrabold flex items-center justify-center text-lg border border-[var(--border-teal-strong)]">01</span>
               <h2 className="font-display text-2xl font-extrabold text-white">Stage 1: Clinical FNA Biopsy</h2>
             </div>
             <p className="text-sm text-slate-200 leading-relaxed">
@@ -49,30 +49,30 @@ const HowItWorks = () => {
             </p>
             <ul className="space-y-2 text-xs text-slate-300 font-medium">
               <li className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-[#00e5ce]" />
+                <CheckCircle className="w-4 h-4 text-[var(--accent-teal)]" />
                 <span>Smearing cellular fluid evenly onto glass slides.</span>
               </li>
               <li className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-[#00e5ce]" />
+                <CheckCircle className="w-4 h-4 text-[var(--accent-teal)]" />
                 <span>Staining with Wright-Giemsa or Papanicolaou dyes.</span>
               </li>
             </ul>
           </div>
 
-          <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-slate-700 bg-[#0f1d21] p-2 shadow-xl">
-            <img src={fnaProcedure} alt="FNA Procedure Diagram" className="w-full h-auto rounded-xl" />
+          <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-[var(--border-teal-strong)] bg-[var(--bg-subcard)] p-2">
+            <img src={fnaProcedure} alt="Fine Needle Aspiration Biopsy Syringe Illustration" className="w-full h-auto rounded-xl object-cover" />
           </div>
         </div>
 
         {/* Stage 2 */}
-        <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-6 order-2 lg:order-1 rounded-2xl overflow-hidden border border-slate-700 bg-[#0f1d21] p-2 shadow-xl">
-            <img src={microscopySlide} alt="Microscopy Slide Diagram" className="w-full h-auto rounded-xl" />
+        <div className="bg-bio-card rounded-3xl p-8 border border-[var(--border-teal)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-6 order-2 lg:order-1 rounded-2xl overflow-hidden border border-[var(--border-teal-strong)] bg-[var(--bg-subcard)] p-2">
+            <img src={microscopySlide} alt="Digital Microscopy Glass Slide Illustration" className="w-full h-auto rounded-xl object-cover" />
           </div>
 
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <span className="w-10 h-10 rounded-xl bg-[#0d4044] text-[#00e5ce] font-display font-extrabold flex items-center justify-center text-lg border border-[#00e5ce]/30">02</span>
+              <span className="w-10 h-10 rounded-xl bg-[var(--accent-teal-dark)] text-[var(--accent-teal)] font-display font-extrabold flex items-center justify-center text-lg border border-[var(--border-teal-strong)]">02</span>
               <h2 className="font-display text-2xl font-extrabold text-white">Stage 2: Digital Microscopic Slide Imaging</h2>
             </div>
             <p className="text-sm text-slate-200 leading-relaxed">
@@ -82,9 +82,9 @@ const HowItWorks = () => {
         </div>
 
         {/* Stage 3 */}
-        <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/20 space-y-6">
+        <div className="bg-bio-card rounded-3xl p-8 border border-[var(--border-teal)] space-y-6">
           <div className="flex items-center space-x-3">
-            <span className="w-10 h-10 rounded-xl bg-[#0d4044] text-[#00e5ce] font-display font-extrabold flex items-center justify-center text-lg border border-[#00e5ce]/30">03</span>
+            <span className="w-10 h-10 rounded-xl bg-[var(--accent-teal-dark)] text-[var(--accent-teal)] font-display font-extrabold flex items-center justify-center text-lg border border-[var(--border-teal-strong)]">03</span>
             <div>
               <h2 className="font-display text-2xl font-extrabold text-white">Stage 3: Computerized Nuclear Segmentation (10 Base Features)</h2>
               <p className="text-xs text-slate-300">Active contour models ("snakes") outline the exact boundary of each cell nucleus</p>
@@ -93,10 +93,10 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {BASE_FEATURES.map((feat, idx) => (
-              <div key={idx} className="bg-[#0f1d21] rounded-xl p-4 border border-slate-700/80 space-y-2 hover:border-[#00e5ce]/50 transition-colors">
-                <span className="text-[10px] font-display font-bold text-[#00e5ce] uppercase tracking-wider">Trait #{idx + 1}</span>
+              <div key={idx} className="bg-[var(--bg-subcard)] rounded-xl p-4 border border-slate-700/80 space-y-2 hover:border-[var(--border-teal-strong)] transition-colors">
+                <span className="text-[10px] font-display font-bold text-[var(--accent-teal)] uppercase tracking-wider">Trait #{idx + 1}</span>
                 <h4 className="font-display font-bold text-white text-sm">{feat.name}</h4>
-                <code className="text-[11px] font-mono text-[#00e5ce] bg-[#14252a] px-2 py-0.5 rounded block">{feat.formula}</code>
+                <code className="text-[11px] font-mono text-[var(--accent-teal)] bg-[var(--bg-main)] px-2 py-0.5 rounded block">{feat.formula}</code>
                 <p className="text-xs text-slate-300 leading-relaxed">{feat.desc}</p>
               </div>
             ))}
@@ -104,9 +104,9 @@ const HowItWorks = () => {
         </div>
 
         {/* Stage 4 */}
-        <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/20 space-y-6">
+        <div className="bg-bio-card rounded-3xl p-8 border border-[var(--border-teal)] space-y-6">
           <div className="flex items-center space-x-3">
-            <span className="w-10 h-10 rounded-xl bg-[#0d4044] text-[#00e5ce] font-display font-extrabold flex items-center justify-center text-lg border border-[#00e5ce]/30">04</span>
+            <span className="w-10 h-10 rounded-xl bg-[var(--accent-teal-dark)] text-[var(--accent-teal)] font-display font-extrabold flex items-center justify-center text-lg border border-[var(--border-teal-strong)]">04</span>
             <div>
               <h2 className="font-display text-2xl font-extrabold text-white">Stage 4: Statistical Aggregation ($10 \times 3 = 30$ Features)</h2>
               <p className="text-xs text-slate-300">Why single slide measurements are aggregated into 3 distinct statistical metrics</p>
@@ -114,23 +114,23 @@ const HowItWorks = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#0f1d21] rounded-2xl p-6 border border-slate-700/80 space-y-3">
-              <span className="px-3 py-1 rounded-full bg-[#00e5ce]/20 text-[#00e5ce] font-bold text-xs font-display">Features 1–10</span>
+            <div className="bg-[var(--bg-subcard)] rounded-2xl p-6 border border-slate-700/80 space-y-3">
+              <span className="px-3 py-1 rounded-full bg-[var(--accent-teal)]/20 text-[var(--accent-teal)] font-bold text-xs font-display">Features 1–10</span>
               <h3 className="font-display font-bold text-white text-lg">Mean (Average)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Represents central tendency across all detected cell nuclei on the slide, summarizing baseline cellular structure.
               </p>
             </div>
 
-            <div className="bg-[#0f1d21] rounded-2xl p-6 border border-slate-700/80 space-y-3">
-              <span className="px-3 py-1 rounded-full bg-[#00e5ce]/20 text-[#00e5ce] font-bold text-xs font-display">Features 11–20</span>
+            <div className="bg-[var(--bg-subcard)] rounded-2xl p-6 border border-slate-700/80 space-y-3">
+              <span className="px-3 py-1 rounded-full bg-[var(--accent-teal)]/20 text-[var(--accent-teal)] font-bold text-xs font-display">Features 11–20</span>
               <h3 className="font-display font-bold text-white text-lg">Standard Error (Spread)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Quantifies variability in nuclear size and shape. Malignant tissues typically exhibit variegated cellular pleomorphism.
               </p>
             </div>
 
-            <div className="bg-[#0f1d21] rounded-2xl p-6 border border-slate-700/80 space-y-3">
+            <div className="bg-[var(--bg-subcard)] rounded-2xl p-6 border border-slate-700/80 space-y-3">
               <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 font-bold text-xs font-display">Features 21–30</span>
               <h3 className="font-display font-bold text-white text-lg">Worst (3 Largest Nuclei)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">

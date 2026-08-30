@@ -12,7 +12,7 @@
   }
 }
 
-/* Custom Nightingale Bio-Tech Design System */
+/* Custom Bio-Tech Design System */
 .bg-bio-main {
   background-color: #091214;
 }
@@ -53,8 +53,8 @@
   box-shadow: 0 0 15px -2px rgba(0, 229, 206, 0.25);
 }
 
-/* Nightingale Split Action Button Component */
-.btn-nightingale {
+/* Primary Split Action Button Component */
+.btn-split-primary {
   display: inline-flex;
   align-items: center;
   border-radius: 0.75rem;
@@ -63,7 +63,7 @@
   box-shadow: 0 4px 20px rgba(0, 229, 206, 0.15);
 }
 
-.btn-nightingale-text {
+.btn-split-primary-text {
   background-color: #042a2d;
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
@@ -79,7 +79,7 @@
   transition: background-color 0.2s ease;
 }
 
-.btn-nightingale-icon {
+.btn-split-primary-icon {
   background-color: #00e5ce;
   color: #051416;
   padding: 0.85rem 1rem;
@@ -90,15 +90,15 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.btn-nightingale:hover .btn-nightingale-text {
+.btn-split-primary:hover .btn-split-primary-text {
   background-color: #06383c;
 }
 
-.btn-nightingale:hover .btn-nightingale-icon {
+.btn-split-primary:hover .btn-split-primary-icon {
   background-color: #00fff0;
 }
 
-.btn-nightingale:hover .btn-nightingale-icon svg {
+.btn-split-primary:hover .btn-split-primary-icon svg {
   transform: translate(2px, -2px);
 }
 

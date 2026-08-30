@@ -152,13 +152,13 @@ const PredictPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn-nightingale disabled:opacity-50 cursor-pointer"
+            className="btn-split-primary disabled:opacity-50 cursor-pointer"
           >
-            <span className="btn-nightingale-text">
+            <span className="btn-split-primary-text">
               {loading ? <Loader2 className="w-5 h-5 animate-spin text-[#00e5ce]" /> : <Play className="w-5 h-5 text-[#00e5ce] fill-current" />}
               <span>{loading ? 'Executing Subprocess...' : 'Run Diagnostic Analysis'}</span>
             </span>
-            <span className="btn-nightingale-icon">
+            <span className="btn-split-primary-icon">
               <Play className="w-4 h-4 fill-current" />
             </span>
           </button>

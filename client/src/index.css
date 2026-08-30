@@ -1,10 +1,46 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   GLOBAL THEME VARIABLES
+   Manipulate these CSS custom properties to dynamically change application themes!
+   ========================================================================== */
+:root {
+  /* Page & Layout Backgrounds */
+  --bg-main: #14252a;
+  --bg-card: rgba(28, 49, 55, 0.85);
+  --bg-card-solid: #1c3137;
+  --bg-subcard: #0f1d21;
+  --bg-header: rgba(20, 37, 42, 0.95);
+  --bg-footer: #0f1d21;
+
+  /* Primary Brand Accent Colors (Electric Teal) */
+  --accent-teal: #00e5ce;
+  --accent-teal-hover: #00fff0;
+  --accent-teal-dark: #0d4044;
+  --accent-teal-dark-hover: #115358;
+  --accent-teal-glow: rgba(0, 229, 206, 0.25);
+
+  /* Alert & Malignant Accent Colors (Rose) */
+  --accent-rose: #f43f5e;
+  --accent-rose-dark: rgba(159, 18, 57, 0.4);
+
+  /* Borders & Dividers */
+  --border-teal: rgba(0, 229, 206, 0.2);
+  --border-teal-strong: rgba(0, 229, 206, 0.45);
+  --border-slate: rgba(51, 65, 85, 0.8);
+
+  /* Text & Typography Colors */
+  --text-main: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --text-heading: #ffffff;
+  --text-accent: #00e5ce;
+}
+
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #14252a;
-    color: #e2e8f0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
   }
   h1, h2, h3, h4, h5, h6, .font-display {
     font-family: 'Space Grotesk', sans-serif;
@@ -12,16 +48,16 @@
   }
 }
 
-/* Custom Bio-Tech Design System */
+/* Custom Bio-Tech Utility System */
 .bg-bio-main {
-  background-color: #14252a;
+  background-color: var(--bg-main);
 }
 
 .bg-bio-card {
-  background-color: rgba(28, 49, 55, 0.85);
+  background-color: var(--bg-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 229, 206, 0.2);
+  border: 1px solid var(--border-teal);
 }
 
 .bg-bio-card-hover {
@@ -29,28 +65,28 @@
 }
 
 .bg-bio-card-hover:hover {
-  border-color: rgba(0, 229, 206, 0.45);
-  box-shadow: 0 10px 30px -10px rgba(0, 229, 206, 0.25);
+  border-color: var(--border-teal-strong);
+  box-shadow: 0 10px 30px -10px var(--accent-teal-glow);
   transform: translateY(-2px);
 }
 
 /* Electric Teal Glow Utilities */
 .text-teal-electric {
-  color: #00e5ce;
+  color: var(--accent-teal);
 }
 
 .gradient-text-teal {
-  background: linear-gradient(135deg, #ffffff 0%, #00e5ce 60%, #00bfa5 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-teal) 60%, #00bfa5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glow-teal {
-  box-shadow: 0 0 35px -5px rgba(0, 229, 206, 0.35);
+  box-shadow: 0 0 35px -5px var(--accent-teal-glow);
 }
 
 .glow-teal-sm {
-  box-shadow: 0 0 15px -2px rgba(0, 229, 206, 0.3);
+  box-shadow: 0 0 15px -2px var(--accent-teal-glow);
 }
 
 /* Primary Split Action Button Component */
@@ -64,7 +100,7 @@
 }
 
 .btn-split-primary-text {
-  background-color: #0d4044;
+  background-color: var(--accent-teal-dark);
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -73,14 +109,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(0, 229, 206, 0.3);
+  border: 1px solid var(--border-teal);
   border-right: none;
   border-radius: 0.75rem 0 0 0.75rem;
   transition: background-color 0.2s ease;
 }
 
 .btn-split-primary-icon {
-  background-color: #00e5ce;
+  background-color: var(--accent-teal);
   color: #051416;
   padding: 0.85rem 1rem;
   display: flex;
@@ -91,11 +127,11 @@
 }
 
 .btn-split-primary:hover .btn-split-primary-text {
-  background-color: #115358;
+  background-color: var(--accent-teal-dark-hover);
 }
 
 .btn-split-primary:hover .btn-split-primary-icon {
-  background-color: #00fff0;
+  background-color: var(--accent-teal-hover);
 }
 
 .btn-split-primary:hover .btn-split-primary-icon svg {
@@ -105,8 +141,8 @@
 /* Secondary Wireframe Button */
 .btn-wireframe {
   background-color: rgba(20, 37, 42, 0.85);
-  border: 1px solid rgba(0, 229, 206, 0.35);
-  color: #e2e8f0;
+  border: 1px solid var(--border-teal);
+  color: var(--text-main);
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   padding: 0.85rem 1.5rem;
@@ -115,7 +151,7 @@
 }
 
 .btn-wireframe:hover {
-  border-color: rgba(0, 229, 206, 0.7);
+  border-color: var(--border-teal-strong);
   color: #ffffff;
-  background-color: rgba(0, 229, 206, 0.12);
+  background-color: var(--accent-teal-glow);
 }

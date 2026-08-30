@@ -3,70 +3,119 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
+    background-color: #091214;
+    color: #e2e8f0;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Custom Glassmorphism & UI Utilities */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+/* Custom Nightingale Bio-Tech Design System */
+.bg-bio-main {
+  background-color: #091214;
+}
+
+.bg-bio-card {
+  background-color: rgba(14, 28, 31, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 229, 206, 0.12);
 }
 
-.glass-card {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+.bg-bio-card-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card:hover {
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
+.bg-bio-card-hover:hover {
+  border-color: rgba(0, 229, 206, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 229, 206, 0.2);
   transform: translateY(-2px);
 }
 
-.gradient-text-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #3b82f6 100%);
+/* Electric Teal Glow Utilities */
+.text-teal-electric {
+  color: #00e5ce;
+}
+
+.gradient-text-teal {
+  background: linear-gradient(135deg, #ffffff 0%, #00e5ce 60%, #00bfa5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-rose {
-  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 50%, #e11d48 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.glow-teal {
+  box-shadow: 0 0 35px -5px rgba(0, 229, 206, 0.3);
 }
 
-.gradient-text-emerald {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.glow-teal-sm {
+  box-shadow: 0 0 15px -2px rgba(0, 229, 206, 0.25);
 }
 
-/* Glow effects */
-.glow-cyan {
-  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.3);
+/* Nightingale Split Action Button Component */
+.btn-nightingale {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 229, 206, 0.15);
 }
 
-.glow-rose {
-  box-shadow: 0 0 35px -5px rgba(244, 63, 94, 0.4);
+.btn-nightingale-text {
+  background-color: #042a2d;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(0, 229, 206, 0.2);
+  border-right: none;
+  border-radius: 0.75rem 0 0 0.75rem;
+  transition: background-color 0.2s ease;
 }
 
-.glow-emerald {
-  box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.4);
+.btn-nightingale-icon {
+  background-color: #00e5ce;
+  color: #051416;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0.75rem 0.75rem 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Pulse animation */
-@keyframes pulse-subtle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.02); }
+.btn-nightingale:hover .btn-nightingale-text {
+  background-color: #06383c;
 }
 
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s ease-in-out infinite;
+.btn-nightingale:hover .btn-nightingale-icon {
+  background-color: #00fff0;
+}
+
+.btn-nightingale:hover .btn-nightingale-icon svg {
+  transform: translate(2px, -2px);
+}
+
+/* Secondary Wireframe Button */
+.btn-wireframe {
+  background-color: rgba(9, 18, 20, 0.8);
+  border: 1px solid rgba(0, 229, 206, 0.25);
+  color: #e2e8f0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btn-wireframe:hover {
+  border-color: rgba(0, 229, 206, 0.6);
+  color: #ffffff;
+  background-color: rgba(0, 229, 206, 0.08);
 }

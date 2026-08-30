@@ -3,7 +3,7 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #091214;
+    background-color: #14252a;
     color: #e2e8f0;
   }
   h1, h2, h3, h4, h5, h6, .font-display {
@@ -14,14 +14,14 @@
 
 /* Custom Bio-Tech Design System */
 .bg-bio-main {
-  background-color: #091214;
+  background-color: #14252a;
 }
 
 .bg-bio-card {
-  background-color: rgba(14, 28, 31, 0.85);
+  background-color: rgba(28, 49, 55, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 229, 206, 0.12);
+  border: 1px solid rgba(0, 229, 206, 0.2);
 }
 
 .bg-bio-card-hover {
@@ -29,8 +29,8 @@
 }
 
 .bg-bio-card-hover:hover {
-  border-color: rgba(0, 229, 206, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(0, 229, 206, 0.2);
+  border-color: rgba(0, 229, 206, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(0, 229, 206, 0.25);
   transform: translateY(-2px);
 }
 
@@ -46,11 +46,11 @@
 }
 
 .glow-teal {
-  box-shadow: 0 0 35px -5px rgba(0, 229, 206, 0.3);
+  box-shadow: 0 0 35px -5px rgba(0, 229, 206, 0.35);
 }
 
 .glow-teal-sm {
-  box-shadow: 0 0 15px -2px rgba(0, 229, 206, 0.25);
+  box-shadow: 0 0 15px -2px rgba(0, 229, 206, 0.3);
 }
 
 /* Primary Split Action Button Component */
@@ -60,11 +60,11 @@
   border-radius: 0.75rem;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 229, 206, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 229, 206, 0.2);
 }
 
 .btn-split-primary-text {
-  background-color: #042a2d;
+  background-color: #0d4044;
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -73,7 +73,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(0, 229, 206, 0.2);
+  border: 1px solid rgba(0, 229, 206, 0.3);
   border-right: none;
   border-radius: 0.75rem 0 0 0.75rem;
   transition: background-color 0.2s ease;
@@ -91,7 +91,7 @@
 }
 
 .btn-split-primary:hover .btn-split-primary-text {
-  background-color: #06383c;
+  background-color: #115358;
 }
 
 .btn-split-primary:hover .btn-split-primary-icon {
@@ -104,8 +104,8 @@
 
 /* Secondary Wireframe Button */
 .btn-wireframe {
-  background-color: rgba(9, 18, 20, 0.8);
-  border: 1px solid rgba(0, 229, 206, 0.25);
+  background-color: rgba(20, 37, 42, 0.85);
+  border: 1px solid rgba(0, 229, 206, 0.35);
   color: #e2e8f0;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
@@ -115,7 +115,7 @@
 }
 
 .btn-wireframe:hover {
-  border-color: rgba(0, 229, 206, 0.6);
+  border-color: rgba(0, 229, 206, 0.7);
   color: #ffffff;
-  background-color: rgba(0, 229, 206, 0.08);
+  background-color: rgba(0, 229, 206, 0.12);
 }

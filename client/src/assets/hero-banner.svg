@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" style="background: #081012;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" style="background: #14252a;">
   <defs>
     <radialGradient id="bioGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00e5ce" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#081012" stop-opacity="0" />
+      <stop offset="0%" stop-color="#00e5ce" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#14252a" stop-opacity="0" />
     </radialGradient>
 
     <!-- 3D Organic Sphere Gradients -->
     <radialGradient id="sphereTeal" cx="35%" cy="35%" r="65%">
       <stop offset="0%" stop-color="#00ffea" />
       <stop offset="30%" stop-color="#00bfa5" />
-      <stop offset="70%" stop-color="#073a3d" />
-      <stop offset="100%" stop-color="#031a1c" />
+      <stop offset="70%" stop-color="#0b4a4e" />
+      <stop offset="100%" stop-color="#052427" />
     </radialGradient>
 
     <radialGradient id="sphereRose" cx="35%" cy="35%" r="65%">
       <stop offset="0%" stop-color="#ff6b8b" />
       <stop offset="35%" stop-color="#e11d48" />
-      <stop offset="75%" stop-color="#4c0519" />
-      <stop offset="100%" stop-color="#1c0209" />
+      <stop offset="75%" stop-color="#5c071e" />
+      <stop offset="100%" stop-color="#24030c" />
     </radialGradient>
 
     <filter id="shadow3d" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="8" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity="0.8" />
+      <feDropShadow dx="8" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
     </filter>
   </defs>
 
   <!-- Background Ambient Glow -->
-  <rect width="1200" height="630" fill="#081012" />
+  <rect width="1200" height="630" fill="#14252a" />
   <circle cx="750" cy="315" r="400" fill="url(#bioGlow)" />
 
   <!-- Wireframe Circuit Overlay -->
-  <g opacity="0.08" stroke="#00e5ce" stroke-width="1">
+  <g opacity="0.1" stroke="#00e5ce" stroke-width="1">
     <pattern id="bioGrid" width="50" height="50" patternUnits="userSpaceOnUse">
       <path d="M 50 0 L 0 0 0 50" fill="none" />
     </pattern>
@@ -55,17 +55,17 @@
     <circle cx="180" cy="90" r="34" fill="url(#sphereRose)" />
     <circle cx="240" cy="150" r="26" fill="url(#sphereRose)" />
 
-    <line x1="-180" y1="-220" x2="-120" y2="-260" stroke="#00e5ce" stroke-width="3" opacity="0.4" stroke-dasharray="4,4" />
-    <line x1="-120" y1="-160" x2="-60" y2="-190" stroke="#00e5ce" stroke-width="3" opacity="0.4" stroke-dasharray="4,4" />
-    <line x1="-60" y1="-100" x2="0" y2="-120" stroke="#00e5ce" stroke-width="3" opacity="0.5" stroke-dasharray="4,4" />
-    <line x1="0" y1="-30" x2="60" y2="-40" stroke="#ff6b8b" stroke-width="4" opacity="0.6" />
-    <line x1="60" y1="40" x2="120" y2="30" stroke="#00e5ce" stroke-width="3" opacity="0.5" stroke-dasharray="4,4" />
-    <line x1="120" y1="110" x2="180" y2="90" stroke="#00e5ce" stroke-width="3" opacity="0.4" stroke-dasharray="4,4" />
+    <line x1="-180" y1="-220" x2="-120" y2="-260" stroke="#00e5ce" stroke-width="3" opacity="0.5" stroke-dasharray="4,4" />
+    <line x1="-120" y1="-160" x2="-60" y2="-190" stroke="#00e5ce" stroke-width="3" opacity="0.5" stroke-dasharray="4,4" />
+    <line x1="-60" y1="-100" x2="0" y2="-120" stroke="#00e5ce" stroke-width="3" opacity="0.6" stroke-dasharray="4,4" />
+    <line x1="0" y1="-30" x2="60" y2="-40" stroke="#ff6b8b" stroke-width="4" opacity="0.7" />
+    <line x1="60" y1="40" x2="120" y2="30" stroke="#00e5ce" stroke-width="3" opacity="0.6" stroke-dasharray="4,4" />
+    <line x1="120" y1="110" x2="180" y2="90" stroke="#00e5ce" stroke-width="3" opacity="0.5" stroke-dasharray="4,4" />
   </g>
 
   <!-- Overlay Telemetry Text Badges -->
   <g transform="translate(80, 480)">
-    <rect x="0" y="0" width="260" height="54" rx="10" fill="#0d1a1d" stroke="#00e5ce" stroke-width="1.5" />
+    <rect x="0" y="0" width="260" height="54" rx="10" fill="#0f1d21" stroke="#00e5ce" stroke-width="1.5" />
     <text x="20" y="24" fill="#9fb7b9" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ONCOVISION AI ENGINE</text>
     <text x="20" y="42" fill="#00e5ce" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700">WDBC Pathology Assistant</text>
   </g>

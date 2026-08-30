@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" style="background: #081012;">
-  <rect width="800" height="500" fill="#081012" rx="12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" style="background: #14252a;">
+  <rect width="800" height="500" fill="#14252a" rx="12"/>
   
   <text x="400" y="55" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" text-anchor="middle">Stage 1: Clinical FNA Biopsy</text>
-  <text x="400" y="80" fill="#9fb7b9" font-family="sans-serif" font-size="13" text-anchor="middle">21–25 Gauge Fine Needle Cell Extraction &amp; Digitization</text>
+  <text x="400" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="13" text-anchor="middle">21–25 Gauge Fine Needle Cell Extraction &amp; Digitization</text>
 
   <!-- Tissue Surface -->
-  <path d="M 50 340 Q 250 290 450 330 T 750 310 L 750 450 L 50 450 Z" fill="#0d1f22" opacity="0.8"/>
-  <circle cx="480" cy="350" r="55" fill="#3b0712" stroke="#e11d48" stroke-width="1.5" />
-  <circle cx="460" cy="340" r="25" fill="#9f1239" />
+  <path d="M 50 340 Q 250 290 450 330 T 750 310 L 750 450 L 50 450 Z" fill="#182e34" opacity="0.9"/>
+  <circle cx="480" cy="350" r="55" fill="#4c0a18" stroke="#e11d48" stroke-width="1.5" />
+  <circle cx="460" cy="340" r="25" fill="#be123c" />
 
   <!-- Syringe Needle Assembly -->
   <g transform="translate(180, 90) rotate(35)">
     <rect x="0" y="24" width="280" height="4" fill="#00e5ce" />
     <polygon points="280,24 295,26 280,28" fill="#ffffff" />
-    <rect x="-20" y="14" width="20" height="24" rx="3" fill="#042a2d" stroke="#00e5ce" stroke-width="1" />
-    <rect x="-180" y="10" width="160" height="32" rx="4" fill="rgba(0, 229, 206, 0.1)" stroke="#00e5ce" stroke-width="2" />
+    <rect x="-20" y="14" width="20" height="24" rx="3" fill="#0d4044" stroke="#00e5ce" stroke-width="1" />
+    <rect x="-180" y="10" width="160" height="32" rx="4" fill="rgba(0, 229, 206, 0.15)" stroke="#00e5ce" stroke-width="2" />
     <rect x="-80" y="12" width="60" height="28" fill="rgba(225, 29, 72, 0.5)" />
-    <rect x="-250" y="20" width="70" height="12" fill="#334155" />
+    <rect x="-250" y="20" width="70" height="12" fill="#475569" />
     <rect x="-260" y="10" width="10" height="32" fill="#00e5ce" />
   </g>
 </svg>

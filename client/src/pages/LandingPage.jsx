@@ -20,7 +20,7 @@ const LandingPage = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Transforming raw Fine Needle Aspiration (FNA) nuclear morphometrics into instant malignant vs. benign diagnostic predictions using Random Forest ensembles trained on the Wisconsin Clinical dataset.
             </p>
 
@@ -45,18 +45,18 @@ const LandingPage = () => {
             </div>
 
             {/* Trust Metrics Row */}
-            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-[#00e5ce]/15">
+            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-[#00e5ce]/20">
               <div>
                 <p className="font-display text-3xl font-extrabold text-white">97.37%</p>
-                <p className="text-xs text-slate-400 font-medium">Test Set Accuracy</p>
+                <p className="text-xs text-slate-300 font-medium">Test Set Accuracy</p>
               </div>
               <div>
                 <p className="font-display text-3xl font-extrabold text-[#00e5ce]">30</p>
-                <p className="text-xs text-slate-400 font-medium">Nuclear Attributes</p>
+                <p className="text-xs text-slate-300 font-medium">Nuclear Attributes</p>
               </div>
               <div>
                 <p className="font-display text-3xl font-extrabold text-emerald-400">0.99</p>
-                <p className="text-xs text-slate-400 font-medium">ROC-AUC Score</p>
+                <p className="text-xs text-slate-300 font-medium">ROC-AUC Score</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ const LandingPage = () => {
 
           {/* Right Hero 3D Molecular Graphics */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[#00e5ce]/20 p-2 shadow-2xl glow-teal">
+            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[#00e5ce]/30 p-2 shadow-2xl glow-teal">
               <img
                 src={heroBanner}
                 alt="OncoVision AI Pathology Engine Graphic"
@@ -82,7 +82,7 @@ const LandingPage = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
             Quantitative AI Pathology Platform
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
+          <p className="text-slate-200 text-base leading-relaxed">
             Differentiating benign breast lesions from invasive malignant carcinomas with high mathematical precision.
           </p>
         </div>
@@ -91,7 +91,7 @@ const LandingPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
               <Microscope className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Fine Needle Aspiration (FNA)</h3>
@@ -101,7 +101,7 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
               <LineChart className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Algorithmic Morphometry</h3>
@@ -111,7 +111,7 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#042a2d] border border-[#00e5ce]/30 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Early Intervention</h3>
@@ -133,7 +133,7 @@ const LandingPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div className="bg-[#050b0c] rounded-xl p-6 border border-slate-800 space-y-3">
+            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
               <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">01</span>
               <h4 className="font-display font-bold text-white text-lg">Biopsy &amp; Slide Digitization</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -141,7 +141,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-[#050b0c] rounded-xl p-6 border border-slate-800 space-y-3">
+            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
               <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">02</span>
               <h4 className="font-display font-bold text-white text-lg">Computer Vision Segmentation</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -149,7 +149,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-[#050b0c] rounded-xl p-6 border border-slate-800 space-y-3">
+            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
               <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">03</span>
               <h4 className="font-display font-bold text-white text-lg">Subprocess ML Inference</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -163,11 +163,11 @@ const LandingPage = () => {
 
       {/* Call-to-Action Footer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#042a2d] via-[#081a1d] to-[#091214] p-8 sm:p-12 border border-[#00e5ce]/30 text-center space-y-6 shadow-2xl">
+        <div className="rounded-3xl bg-gradient-to-r from-[#0d4044] via-[#162d33] to-[#14252a] p-8 sm:p-12 border border-[#00e5ce]/30 text-center space-y-6 shadow-2xl">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
             Ready to Test Live Cytometric Inference?
           </h2>
-          <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+          <p className="text-slate-200 max-w-2xl mx-auto text-sm sm:text-base">
             Input custom 30-feature values or load pre-set malignant/benign clinical samples to observe real-time pathology predictions.
           </p>
           <div className="pt-2 flex justify-center">

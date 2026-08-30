@@ -4,13 +4,13 @@ import { ShieldAlert, ExternalLink, Activity } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#050b0c] border-t border-[#00e5ce]/15 text-slate-400 font-sans">
+    <footer className="bg-[#0f1d21] border-t border-[#00e5ce]/20 text-slate-300 font-sans">
       
       {/* Clinical Disclaimer Banner */}
-      <div className="bg-[#091214] border-b border-[#00e5ce]/15 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#14252a] border-b border-[#00e5ce]/20 py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-start sm:items-center space-x-3 text-[#00e5ce] text-xs sm:text-sm">
           <ShieldAlert className="w-5 h-5 shrink-0 mt-0.5 sm:mt-0" />
-          <p className="text-slate-300">
+          <p className="text-slate-200">
             <strong className="font-semibold text-[#00e5ce]">Academic &amp; Research Disclaimer:</strong> This application serves benchmark models for Wisconsin Diagnostic Breast Cancer classification. It is not certified for standalone clinical diagnostic decisions.
           </p>
         </div>
@@ -22,12 +22,12 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-[#042a2d] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
+              <div className="w-8 h-8 rounded-lg bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
                 <Activity className="w-4 h-4" />
               </div>
               <span className="font-display font-bold text-xl text-white">OncoVision AI</span>
             </div>
-            <p className="text-sm text-slate-400 max-w-md leading-relaxed">
+            <p className="text-sm text-slate-300 max-w-md leading-relaxed">
               Serving real-time machine learning predictions using 30 digitized Fine Needle Aspiration (FNA) nuclear morphometrics trained on Random Forest Ensembles.
             </p>
           </div>
@@ -46,7 +46,7 @@ const Footer = () => {
           {/* Credits */}
           <div>
             <h4 className="font-display font-bold text-white text-sm mb-4 uppercase tracking-wider">Source Citation</h4>
-            <p className="text-xs text-slate-400 leading-relaxed mb-3">
+            <p className="text-xs text-slate-300 leading-relaxed mb-3">
               WDBC Dataset: W.H. Wolberg, W.N. Street, and O.L. Mangasarian (Univ. of Wisconsin Clinical Sciences Center).
             </p>
             <a
@@ -62,7 +62,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 space-y-4 sm:space-y-0">
           <p>© {new Date().getFullYear()} OncoVision AI Pathology Assistant. MERN Stack &amp; Python Architecture.</p>
           <p>Powered by Scikit-Learn, Express, React, and Tailwind CSS.</p>
         </div>

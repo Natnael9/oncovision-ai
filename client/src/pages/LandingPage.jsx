@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, GitMerge, ShieldCheck, Microscope, LineChart, ArrowUpRight, Zap } from 'lucide-react';
+import { Cpu, GitMerge, ShieldCheck, Microscope, LineChart, ArrowUpRight } from 'lucide-react';
 import heroBanner from '../assets/hero-banner.svg';
 
 const LandingPage = () => {
@@ -14,12 +14,6 @@ const LandingPage = () => {
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Badge Tag */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#00e5ce]/10 border border-[#00e5ce]/30 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider">
-              <Zap className="w-4 h-4 text-[#00e5ce] animate-pulse" />
-              <span>AI-Powered Pathology Assistant</span>
-            </div>
-
             {/* Main Headline */}
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
               Precision Breast Cancer <span className="gradient-text-teal">Diagnostics</span>

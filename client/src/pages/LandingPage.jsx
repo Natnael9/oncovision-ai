@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cpu, GitMerge, ShieldCheck, Microscope, LineChart, ArrowUpRight } from 'lucide-react';
-import heroBanner from '../assets/hero-banner.svg';
+import breastCancerCell from '../assets/breast-cancer-cell.png';
 
 const LandingPage = () => {
   return (
@@ -62,12 +62,12 @@ const LandingPage = () => {
 
           </div>
 
-          {/* Right Hero Graphics */}
+          {/* Right Hero Image (Single Breast Cancer Pathology Micrograph) */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[var(--border-teal-strong)] p-2">
               <img
-                src={heroBanner}
-                alt="OncoVision AI Pathology Engine Graphic"
+                src={breastCancerCell}
+                alt="Breast Cancer Cytological Pathology Micrograph"
                 className="w-full h-auto rounded-xl object-cover transform hover:scale-[1.01] transition-transform duration-300"
               />
             </div>

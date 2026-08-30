@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldAlert, ExternalLink, Activity } from 'lucide-react';
+import { ShieldAlert, ExternalLink } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -22,8 +23,8 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-[var(--accent-teal-dark)] border border-[var(--border-teal-strong)] flex items-center justify-center text-[var(--accent-teal)]">
-                <Activity className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden border border-[var(--border-teal-strong)] bg-slate-950 flex items-center justify-center">
+                <img src={logo} alt="OncoVision AI Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-display font-bold text-xl text-white">OncoVision AI</span>
             </div>

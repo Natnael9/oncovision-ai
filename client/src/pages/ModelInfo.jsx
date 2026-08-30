@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Award, BarChart2, ShieldAlert, CheckCircle2, Database, Info } from 'lucide-react';
+import { FileText, Award, BarChart2, ShieldAlert, CheckCircle2, Database } from 'lucide-react';
 import confusionMatrixImg from '../assets/confusion-matrix.svg';
 import rocCurveImg from '../assets/roc-curve.svg';
 
@@ -27,15 +27,15 @@ const ModelInfo = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 font-sans">
       
       {/* Header Banner */}
-      <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800 space-y-4">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-          <FileText className="w-4 h-4 text-cyan-400" />
+      <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[#00e5ce]/20 space-y-4">
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#00e5ce]/10 border border-[#00e5ce]/30 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider">
+          <FileText className="w-4 h-4 text-[#00e5ce]" />
           <span>Machine Learning Specifications</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
+        <h1 className="font-display text-3xl sm:text-5xl font-extrabold text-white">
           Dataset Architecture &amp; Benchmark Performance
         </h1>
         <p className="text-slate-300 max-w-3xl text-base leading-relaxed">
@@ -43,58 +43,58 @@ const ModelInfo = () => {
         </p>
       </div>
 
-      {/* Dataset Summary Card */}
-      <div className="glass-card rounded-3xl p-8 border border-slate-800 space-y-6">
+      {/* Dataset Summary Specs */}
+      <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/15 space-y-6">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-xl bg-[#042a2d] text-[#00e5ce] flex items-center justify-center font-bold border border-[#00e5ce]/30">
             <Database className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-2xl font-extrabold text-white">Dataset Summary Specs</h2>
+            <h2 className="font-display text-2xl font-extrabold text-white">Dataset Summary Specs</h2>
             <p className="text-xs text-slate-400">University of Wisconsin Clinical Sciences Center (Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian)</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-1">
+          <div className="bg-[#050b0c] rounded-2xl p-5 border border-slate-800 space-y-1">
             <span className="text-xs text-slate-400 font-semibold">Total Sample Count</span>
-            <p className="text-3xl font-extrabold text-white">569</p>
-            <p className="text-[11px] text-cyan-400">Digitized FNA instances</p>
+            <p className="font-display text-3xl font-extrabold text-white">569</p>
+            <p className="text-[11px] text-[#00e5ce]">Digitized FNA instances</p>
           </div>
 
-          <div className="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-1">
+          <div className="bg-[#050b0c] rounded-2xl p-5 border border-slate-800 space-y-1">
             <span className="text-xs text-slate-400 font-semibold">Class Balance</span>
-            <p className="text-3xl font-extrabold text-emerald-400">357 B / 212 M</p>
+            <p className="font-display text-3xl font-extrabold text-emerald-400">357 B / 212 M</p>
             <p className="text-[11px] text-slate-400">62.7% Benign vs. 37.3% Malignant</p>
           </div>
 
-          <div className="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-1">
+          <div className="bg-[#050b0c] rounded-2xl p-5 border border-slate-800 space-y-1">
             <span className="text-xs text-slate-400 font-semibold">Input Attributes</span>
-            <p className="text-3xl font-extrabold text-cyan-400">30</p>
+            <p className="font-display text-3xl font-extrabold text-[#00e5ce]">30</p>
             <p className="text-[11px] text-slate-400">Real-valued continuous features</p>
           </div>
 
-          <div className="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-1">
+          <div className="bg-[#050b0c] rounded-2xl p-5 border border-slate-800 space-y-1">
             <span className="text-xs text-slate-400 font-semibold">Selected Classifier</span>
-            <p className="text-xl font-extrabold text-cyan-300">Random Forest</p>
+            <p className="font-display text-xl font-extrabold text-[#00e5ce]">Random Forest</p>
             <p className="text-[11px] text-slate-400">100 Estimators Ensemble</p>
           </div>
         </div>
       </div>
 
-      {/* Model Comparison Benchmark Table */}
-      <div className="glass-card rounded-3xl p-8 border border-slate-800 space-y-6">
+      {/* Model Comparison Table */}
+      <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/15 space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Award className="w-6 h-6 text-cyan-400" />
-            <h2 className="text-2xl font-extrabold text-white">Model Comparison &amp; Benchmark Metrics</h2>
+            <Award className="w-6 h-6 text-[#00e5ce]" />
+            <h2 className="font-display text-2xl font-extrabold text-white">Model Comparison &amp; Benchmark Metrics</h2>
           </div>
           <span className="text-xs text-slate-400 font-mono hidden sm:block">Test Set N=114 (20% Split)</span>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm text-slate-300">
-            <thead className="bg-slate-950/90 text-xs text-slate-400 uppercase font-semibold border-b border-slate-800">
+            <thead className="bg-[#050b0c] text-xs text-slate-400 uppercase font-display font-semibold border-b border-slate-800">
               <tr>
                 <th className="py-4 px-6">Algorithm Model</th>
                 <th className="py-4 px-6">Test Accuracy</th>
@@ -103,18 +103,18 @@ const ModelInfo = () => {
                 <th className="py-4 px-6">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 bg-slate-900/40">
+            <tbody className="divide-y divide-slate-800/60 bg-[#091214]/60">
               
-              <tr className="bg-cyan-500/10 border-l-4 border-l-cyan-400">
-                <td className="py-4 px-6 font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+              <tr className="bg-[#042a2d]/40 border-l-4 border-l-[#00e5ce]">
+                <td className="py-4 px-6 font-display font-bold text-white flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#00e5ce]" />
                   Random Forest Classifier (Selected)
                 </td>
-                <td className="py-4 px-6 font-mono font-extrabold text-cyan-400 text-base">97.37%</td>
+                <td className="py-4 px-6 font-mono font-extrabold text-[#00e5ce] text-base">97.37%</td>
                 <td className="py-4 px-6 font-mono text-slate-200">95.61% (±2.28%)</td>
                 <td className="py-4 px-6 font-mono font-bold text-emerald-400">0.99</td>
                 <td className="py-4 px-6">
-                  <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 font-bold text-xs">Production Model</span>
+                  <span className="px-3 py-1 rounded-full bg-[#00e5ce]/20 text-[#00e5ce] font-display font-bold text-xs">Production Model</span>
                 </td>
               </tr>
 
@@ -124,7 +124,7 @@ const ModelInfo = () => {
                 <td className="py-4 px-6 font-mono text-slate-400">96.49% (±1.85%)</td>
                 <td className="py-4 px-6 font-mono text-slate-300">0.98</td>
                 <td className="py-4 px-6">
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-400 text-xs font-medium">Benchmarked</span>
+                  <span className="px-2.5 py-1 rounded bg-[#050b0c] text-slate-400 text-xs font-medium">Benchmarked</span>
                 </td>
               </tr>
 
@@ -134,7 +134,7 @@ const ModelInfo = () => {
                 <td className="py-4 px-6 font-mono text-slate-400">95.09% (±2.41%)</td>
                 <td className="py-4 px-6 font-mono text-slate-300">0.97</td>
                 <td className="py-4 px-6">
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-400 text-xs font-medium">Benchmarked</span>
+                  <span className="px-2.5 py-1 rounded bg-[#050b0c] text-slate-400 text-xs font-medium">Benchmarked</span>
                 </td>
               </tr>
 
@@ -143,12 +143,12 @@ const ModelInfo = () => {
         </div>
       </div>
 
-      {/* Top 10 Feature Importance Visualization */}
-      <div className="glass-card rounded-3xl p-8 border border-slate-800 space-y-6">
+      {/* Feature Importance Chart */}
+      <div className="bg-bio-card rounded-3xl p-8 border border-[#00e5ce]/15 space-y-6">
         <div className="flex items-center space-x-3">
-          <BarChart2 className="w-6 h-6 text-cyan-400" />
+          <BarChart2 className="w-6 h-6 text-[#00e5ce]" />
           <div>
-            <h2 className="text-2xl font-extrabold text-white">Top 10 Feature Importance (Gini Score)</h2>
+            <h2 className="font-display text-2xl font-extrabold text-white">Top 10 Feature Importance (Gini Score)</h2>
             <p className="text-xs text-slate-400">Relative contribution of nuclear morphometrics to Random Forest decision splits</p>
           </div>
         </div>
@@ -158,17 +158,16 @@ const ModelInfo = () => {
             <div key={idx} className="space-y-1.5">
               <div className="flex items-center justify-between text-xs sm:text-sm font-semibold">
                 <span className="text-slate-200 capitalize flex items-center gap-2">
-                  <span className="w-5 h-5 rounded bg-slate-800 text-cyan-400 flex items-center justify-center text-[10px] font-bold">#{idx + 1}</span>
+                  <span className="w-5 h-5 rounded bg-[#050b0c] text-[#00e5ce] flex items-center justify-center text-[10px] font-bold">#{idx + 1}</span>
                   {item.feature}
                 </span>
-                <span className="font-mono text-cyan-400 font-extrabold">{item.importance}%</span>
+                <span className="font-mono text-[#00e5ce] font-extrabold">{item.importance}%</span>
               </div>
 
-              {/* Progress Bar */}
-              <div className="w-full h-3 bg-slate-950 rounded-full overflow-hidden p-0.5 border border-slate-800">
+              <div className="w-full h-3 bg-[#050b0c] rounded-full overflow-hidden p-0.5 border border-slate-800">
                 <div
                   style={{ width: `${(item.importance / 16) * 100}%` }}
-                  className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 rounded-full transition-all duration-700"
+                  className="h-full bg-gradient-to-r from-[#00bfa5] to-[#00e5ce] rounded-full transition-all duration-700"
                 />
               </div>
             </div>
@@ -176,36 +175,28 @@ const ModelInfo = () => {
         </div>
       </div>
 
-      {/* Model Evaluation Graphics Side-by-Side */}
+      {/* Model Evaluation Graphics */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
-        {/* Confusion Matrix */}
-        <div className="glass-card rounded-3xl p-6 border border-slate-800 space-y-4">
-          <h3 className="text-xl font-bold text-white flex items-center gap-2">
-            Confusion Matrix (Test Set N=114)
-          </h3>
-          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2">
+        <div className="bg-bio-card rounded-3xl p-6 border border-[#00e5ce]/15 space-y-4">
+          <h3 className="font-display text-xl font-bold text-white">Confusion Matrix (Test Set N=114)</h3>
+          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-[#050b0c] p-2">
             <img src={confusionMatrixImg} alt="Confusion Matrix Graphic" className="w-full h-auto rounded-xl" />
           </div>
         </div>
 
-        {/* ROC Curve */}
-        <div className="glass-card rounded-3xl p-6 border border-slate-800 space-y-4">
-          <h3 className="text-xl font-bold text-white flex items-center gap-2">
-            ROC Curve (AUC = 0.99)
-          </h3>
-          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2">
+        <div className="bg-bio-card rounded-3xl p-6 border border-[#00e5ce]/15 space-y-4">
+          <h3 className="font-display text-xl font-bold text-white">ROC Curve (AUC = 0.99)</h3>
+          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-[#050b0c] p-2">
             <img src={rocCurveImg} alt="ROC Curve Graphic" className="w-full h-auto rounded-xl" />
           </div>
         </div>
-
       </div>
 
       {/* Mandatory Clinical Research Disclaimer */}
-      <div className="rounded-2xl p-6 bg-slate-900 border border-amber-500/30 flex items-start space-x-4">
-        <ShieldAlert className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
+      <div className="rounded-2xl p-6 bg-[#050b0c] border border-[#00e5ce]/30 flex items-start space-x-4">
+        <ShieldAlert className="w-6 h-6 text-[#00e5ce] shrink-0 mt-0.5" />
         <div className="space-y-1">
-          <h4 className="font-bold text-amber-300 text-sm uppercase tracking-wider">Mandatory Clinical Research Disclaimer</h4>
+          <h4 className="font-display font-bold text-[#00e5ce] text-sm uppercase tracking-wider">Mandatory Research Disclaimer</h4>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
             This software, trained machine learning model, and diagnostic prediction engine are strictly intended for academic research, bench-testing demonstration, and scientific exploratory analysis. They are not cleared, certified, or intended for direct standalone clinical diagnosis or prescribing medical treatments.
           </p>

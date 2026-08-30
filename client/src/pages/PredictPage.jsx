@@ -87,12 +87,12 @@ const PredictPage = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 font-sans">
       
       {/* Header & Presets Bar */}
-      <div className="bg-bio-card rounded-3xl p-6 sm:p-8 border border-[#00e5ce]/20 space-y-6">
+      <div className="bg-bio-card rounded-3xl p-6 sm:p-8 border border-[var(--border-teal)] space-y-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           
           <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00e5ce]/10 text-[#00e5ce] text-xs font-display font-semibold uppercase tracking-wider mb-2">
-              <Cpu className="w-4 h-4 text-[#00e5ce]" />
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[var(--accent-teal)]/10 text-[var(--accent-teal)] text-xs font-display font-semibold uppercase tracking-wider mb-2">
+              <Cpu className="w-4 h-4 text-[var(--accent-teal)]" />
               <span>Interactive Pathology Laboratory</span>
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
@@ -117,16 +117,16 @@ const PredictPage = () => {
             <button
               type="button"
               onClick={handleLoadBenign}
-              className="px-4 py-2.5 rounded-xl bg-[#00e5ce]/20 border border-[#00e5ce]/40 text-[#00e5ce] hover:bg-[#00e5ce]/30 text-xs font-display font-bold transition-all flex items-center space-x-2 shadow-sm"
+              className="px-4 py-2.5 rounded-xl bg-[var(--accent-teal)]/20 border border-[var(--border-teal-strong)] text-[var(--accent-teal)] hover:bg-[var(--accent-teal)]/30 text-xs font-display font-bold transition-all flex items-center space-x-2 shadow-sm"
             >
-              <CheckCircle2 className="w-4 h-4 text-[#00e5ce]" />
+              <CheckCircle2 className="w-4 h-4 text-[var(--accent-teal)]" />
               <span>Load Benign Sample</span>
             </button>
 
             <button
               type="button"
               onClick={handleReset}
-              className="px-3.5 py-2.5 rounded-xl bg-[#0f1d21] border border-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center space-x-1.5"
+              className="px-3.5 py-2.5 rounded-xl bg-[var(--bg-subcard)] border border-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center space-x-1.5"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>Reset Form</span>
@@ -155,7 +155,7 @@ const PredictPage = () => {
             className="btn-split-primary disabled:opacity-50 cursor-pointer"
           >
             <span className="btn-split-primary-text">
-              {loading ? <Loader2 className="w-5 h-5 animate-spin text-[#00e5ce]" /> : <Play className="w-5 h-5 text-[#00e5ce] fill-current" />}
+              {loading ? <Loader2 className="w-5 h-5 animate-spin text-[var(--accent-teal)]" /> : <Play className="w-5 h-5 text-[var(--accent-teal)] fill-current" />}
               <span>{loading ? 'Executing Subprocess...' : 'Run Diagnostic Analysis'}</span>
             </span>
             <span className="btn-split-primary-icon">

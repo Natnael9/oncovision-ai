@@ -29,7 +29,7 @@ const LandingPage = () => {
               
               <Link to="/predict" className="btn-split-primary group">
                 <span className="btn-split-primary-text">
-                  <Cpu className="w-5 h-5 text-[#00e5ce]" />
+                  <Cpu className="w-5 h-5 text-[var(--accent-teal)]" />
                   <span>Launch Diagnostic Predictor</span>
                 </span>
                 <span className="btn-split-primary-icon">
@@ -38,20 +38,20 @@ const LandingPage = () => {
               </Link>
 
               <Link to="/how-it-works" className="btn-wireframe flex items-center space-x-2">
-                <GitMerge className="w-5 h-5 text-[#00e5ce]" />
+                <GitMerge className="w-5 h-5 text-[var(--accent-teal)]" />
                 <span>Our Science &amp; Pipeline</span>
               </Link>
 
             </div>
 
             {/* Trust Metrics Row */}
-            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-[#00e5ce]/20">
+            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-[var(--border-teal)]">
               <div>
                 <p className="font-display text-3xl font-extrabold text-white">97.37%</p>
                 <p className="text-xs text-slate-300 font-medium">Test Set Accuracy</p>
               </div>
               <div>
-                <p className="font-display text-3xl font-extrabold text-[#00e5ce]">30</p>
+                <p className="font-display text-3xl font-extrabold text-[var(--accent-teal)]">30</p>
                 <p className="text-xs text-slate-300 font-medium">Nuclear Attributes</p>
               </div>
               <div>
@@ -64,7 +64,7 @@ const LandingPage = () => {
 
           {/* Right Hero 3D Molecular Graphics */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[#00e5ce]/30 p-2 shadow-2xl glow-teal">
+            <div className="relative rounded-2xl overflow-hidden bg-bio-card border border-[var(--border-teal-strong)] p-2 shadow-2xl glow-teal">
               <img
                 src={heroBanner}
                 alt="OncoVision AI Pathology Engine Graphic"
@@ -91,7 +91,7 @@ const LandingPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[var(--accent-teal-dark)] border border-[var(--border-teal-strong)] flex items-center justify-center text-[var(--accent-teal)]">
               <Microscope className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Fine Needle Aspiration (FNA)</h3>
@@ -101,7 +101,7 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[var(--accent-teal-dark)] border border-[var(--border-teal-strong)] flex items-center justify-center text-[var(--accent-teal)]">
               <LineChart className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Algorithmic Morphometry</h3>
@@ -111,7 +111,7 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-bio-card bg-bio-card-hover rounded-2xl p-8 space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-[#0d4044] border border-[#00e5ce]/40 flex items-center justify-center text-[#00e5ce]">
+            <div className="w-12 h-12 rounded-xl bg-[var(--accent-teal-dark)] border border-[var(--border-teal-strong)] flex items-center justify-center text-[var(--accent-teal)]">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="font-display text-xl font-bold text-white">Early Intervention</h3>
@@ -125,32 +125,32 @@ const LandingPage = () => {
 
       {/* 3-Step Workflow Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[#00e5ce]/20 relative overflow-hidden">
+        <div className="bg-bio-card rounded-3xl p-8 sm:p-12 border border-[var(--border-teal)] relative overflow-hidden">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-display text-xs font-bold text-[#00e5ce] uppercase tracking-widest">End-to-End Architecture</span>
+            <span className="font-display text-xs font-bold text-[var(--accent-teal)] uppercase tracking-widest">End-to-End Architecture</span>
             <h2 className="font-display text-3xl font-extrabold text-white mt-1">3-Step Diagnostic Pipeline</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
-              <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">01</span>
+            <div className="bg-[var(--bg-subcard)] rounded-xl p-6 border border-slate-700/80 space-y-3">
+              <span className="w-8 h-8 rounded-lg bg-[var(--accent-teal)]/20 text-[var(--accent-teal)] font-bold flex items-center justify-center text-sm">01</span>
               <h4 className="font-display font-bold text-white text-lg">Biopsy &amp; Slide Digitization</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Cellular material extracted via FNA is stained and captured at 40x magnification into digital micrographs.
               </p>
             </div>
 
-            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
-              <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">02</span>
+            <div className="bg-[var(--bg-subcard)] rounded-xl p-6 border border-slate-700/80 space-y-3">
+              <span className="w-8 h-8 rounded-lg bg-[var(--accent-teal)]/20 text-[var(--accent-teal)] font-bold flex items-center justify-center text-sm">02</span>
               <h4 className="font-display font-bold text-white text-lg">Computer Vision Segmentation</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Active contour snakes isolate nuclear boundaries into Mean, Standard Error, and Worst metrics (30 features total).
               </p>
             </div>
 
-            <div className="bg-[#0f1d21] rounded-xl p-6 border border-slate-700/80 space-y-3">
-              <span className="w-8 h-8 rounded-lg bg-[#00e5ce]/20 text-[#00e5ce] font-bold flex items-center justify-center text-sm">03</span>
+            <div className="bg-[var(--bg-subcard)] rounded-xl p-6 border border-slate-700/80 space-y-3">
+              <span className="w-8 h-8 rounded-lg bg-[var(--accent-teal)]/20 text-[var(--accent-teal)] font-bold flex items-center justify-center text-sm">03</span>
               <h4 className="font-display font-bold text-white text-lg">Subprocess ML Inference</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
                 The 30-feature vector executes inside our Python virtual environment bridge, returning real-time diagnostic probabilities.
@@ -163,7 +163,7 @@ const LandingPage = () => {
 
       {/* Call-to-Action Footer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#0d4044] via-[#162d33] to-[#14252a] p-8 sm:p-12 border border-[#00e5ce]/30 text-center space-y-6 shadow-2xl">
+        <div className="rounded-3xl bg-gradient-to-r from-[var(--accent-teal-dark)] via-[#162d33] to-[var(--bg-main)] p-8 sm:p-12 border border-[var(--border-teal-strong)] text-center space-y-6 shadow-2xl">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
             Ready to Test Live Cytometric Inference?
           </h2>
@@ -173,7 +173,7 @@ const LandingPage = () => {
           <div className="pt-2 flex justify-center">
             <Link to="/predict" className="btn-split-primary group">
               <span className="btn-split-primary-text">
-                <Cpu className="w-5 h-5 text-[#00e5ce]" />
+                <Cpu className="w-5 h-5 text-[var(--accent-teal)]" />
                 <span>Launch Diagnostic Predictor</span>
               </span>
               <span className="btn-split-primary-icon">

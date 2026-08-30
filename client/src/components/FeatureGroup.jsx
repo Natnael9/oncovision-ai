@@ -73,20 +73,20 @@ const FeatureGroup = ({ features, onChange }) => {
   const currentCategory = CATEGORIES.find(c => c.id === activeTab);
 
   return (
-    <div className="bg-bio-card rounded-2xl p-6 border border-[#00e5ce]/20">
+    <div className="bg-bio-card rounded-2xl p-6 border border-[var(--border-teal)]">
       
       {/* Category Tabs Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-700/60">
         <div>
           <h3 className="font-display font-bold text-lg text-white flex items-center gap-2">
-            <Layers className="w-5 h-5 text-[#00e5ce]" />
+            <Layers className="w-5 h-5 text-[var(--accent-teal)]" />
             30 Nuclear Morphometric Input Matrix
           </h3>
           <p className="text-xs text-slate-300">Derived from digitized Fine Needle Aspiration (FNA) cell nuclei images</p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center space-x-1 bg-[#0f1d21] p-1 rounded-xl border border-slate-700/80 w-full sm:w-auto overflow-x-auto">
+        <div className="flex items-center space-x-1 bg-[var(--bg-subcard)] p-1 rounded-xl border border-slate-700/80 w-full sm:w-auto overflow-x-auto">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
@@ -94,8 +94,8 @@ const FeatureGroup = ({ features, onChange }) => {
               onClick={() => setActiveTab(cat.id)}
               className={`px-3.5 py-2 rounded-lg font-display text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 activeTab === cat.id
-                  ? 'bg-[#00e5ce] text-slate-950 shadow-md font-bold'
-                  : 'text-slate-300 hover:text-white hover:bg-[#14252a]'
+                  ? 'bg-[var(--accent-teal)] text-slate-950 shadow-md font-bold'
+                  : 'text-slate-300 hover:text-white hover:bg-[var(--bg-main)]'
               }`}
             >
               {cat.id === 'mean' ? 'Mean (1-10)' : cat.id === 'se' ? 'Std Error (11-20)' : 'Worst (21-30)'}
@@ -105,8 +105,8 @@ const FeatureGroup = ({ features, onChange }) => {
       </div>
 
       {/* Category Description Banner */}
-      <div className="bg-[#0f1d21] border border-[#00e5ce]/20 rounded-xl p-4 mb-6">
-        <h4 className="font-display font-bold text-sm text-[#00e5ce] mb-0.5">{currentCategory.title}</h4>
+      <div className="bg-[var(--bg-subcard)] border border-[var(--border-teal)] rounded-xl p-4 mb-6">
+        <h4 className="font-display font-bold text-sm text-[var(--accent-teal)] mb-0.5">{currentCategory.title}</h4>
         <p className="text-xs text-slate-300">{currentCategory.subtitle}</p>
       </div>
 
@@ -120,8 +120,8 @@ const FeatureGroup = ({ features, onChange }) => {
           return (
             <div
               key={idx}
-              className={`relative bg-[#0f1d21] rounded-xl p-3.5 border transition-all duration-200 ${
-                isWorst ? 'border-slate-700/80 hover:border-rose-500/50' : 'border-slate-700/80 hover:border-[#00e5ce]/50'
+              className={`relative bg-[var(--bg-subcard)] rounded-xl p-3.5 border transition-all duration-200 ${
+                isWorst ? 'border-slate-700/80 hover:border-rose-500/50' : 'border-slate-700/80 hover:border-[var(--border-teal-strong)]'
               }`}
             >
               <div className="flex items-center justify-between mb-1.5">
@@ -136,15 +136,15 @@ const FeatureGroup = ({ features, onChange }) => {
                     onMouseEnter={() => setActiveTooltip(idx)}
                     onMouseLeave={() => setActiveTooltip(null)}
                     onClick={() => setActiveTooltip(activeTooltip === idx ? null : idx)}
-                    className="text-slate-400 hover:text-[#00e5ce] p-0.5"
+                    className="text-slate-400 hover:text-[var(--accent-teal)] p-0.5"
                     aria-label={`Info for ${name}`}
                   >
                     <HelpCircle className="w-3.5 h-3.5" />
                   </button>
 
                   {activeTooltip === idx && (
-                    <div className="absolute right-0 bottom-full mb-2 w-56 p-3 bg-[#14252a] border border-[#00e5ce]/50 text-slate-200 text-xs rounded-xl shadow-2xl z-50 pointer-events-none">
-                      <p className="font-display font-bold text-[#00e5ce] mb-1 capitalize">{name}</p>
+                    <div className="absolute right-0 bottom-full mb-2 w-56 p-3 bg-[var(--bg-main)] border border-[var(--border-teal-strong)] text-slate-200 text-xs rounded-xl shadow-2xl z-50 pointer-events-none">
+                      <p className="font-display font-bold text-[var(--accent-teal)] mb-1 capitalize">{name}</p>
                       <p className="text-[11px] leading-relaxed text-slate-300">{FEATURE_DESCRIPTIONS[name]}</p>
                     </div>
                   )}
@@ -158,7 +158,7 @@ const FeatureGroup = ({ features, onChange }) => {
                 value={val}
                 onChange={(e) => onChange(idx, e.target.value)}
                 placeholder="0.0"
-                className="w-full bg-[#14252a] border border-slate-600/80 rounded-lg px-3 py-2 text-sm text-white font-mono placeholder-slate-500 focus:outline-none focus:border-[#00e5ce] focus:ring-1 focus:ring-[#00e5ce] transition-colors"
+                className="w-full bg-[var(--bg-main)] border border-slate-600/80 rounded-lg px-3 py-2 text-sm text-white font-mono placeholder-slate-500 focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-colors"
               />
             </div>
           );

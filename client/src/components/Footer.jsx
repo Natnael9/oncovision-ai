@@ -23,9 +23,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg overflow-hidden border border-[var(--border-teal-strong)] bg-slate-950 flex items-center justify-center">
-                <img src={logo} alt="OncoVision AI Logo" className="w-full h-full object-cover" />
-              </div>
+              <img src={logo} alt="OncoVision AI Logo" className="w-8 h-8 object-contain" />
               <span className="font-display font-bold text-xl text-white">OncoVision AI</span>
             </div>
             <p className="text-sm text-slate-300 max-w-md leading-relaxed">

@@ -23,9 +23,7 @@ const Navbar = () => {
           
           {/* OncoVision AI Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl overflow-hidden border border-[var(--border-teal-strong)] bg-slate-950 flex items-center justify-center group-hover:border-[var(--accent-teal)] transition-all">
-              <img src={logo} alt="OncoVision AI Logo" className="w-full h-full object-cover" />
-            </div>
+            <img src={logo} alt="OncoVision AI Logo" className="w-9 h-9 object-contain group-hover:scale-105 transition-transform" />
 
             <div className="flex flex-col">
               <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-[var(--accent-teal)] transition-colors">

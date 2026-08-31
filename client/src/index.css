@@ -35,16 +35,15 @@
   --text-accent: #00e5ce;
 }
 
-@layer base {
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-  }
-  h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: 'Space Grotesk', sans-serif;
-    letter-spacing: -0.02em;
-  }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 /* Custom Bio-Tech Utility System (Flat & Proper Colors, No Glows) */

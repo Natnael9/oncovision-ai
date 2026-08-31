@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
@@ -7,10 +7,21 @@ import PredictPage from './pages/PredictPage';
 import HowItWorks from './pages/HowItWorks';
 import ModelInfo from './pages/ModelInfo';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-white">
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col bg-[var(--bg-main)] text-slate-100 selection:bg-[var(--accent-teal)] selection:text-slate-950">
         <Navbar />
         <main className="flex-grow">
           <Routes>

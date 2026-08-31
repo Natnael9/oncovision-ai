@@ -1,6 +1,7 @@
 {
   "name": "breast-cancer-client",
   "private": true,
+  "author": "Natnael Ashenafi <ashenafinatnael9@gmail.com>",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import PredictPage from './pages/PredictPage';
 import HowItWorks from './pages/HowItWorks';
 import ModelInfo from './pages/ModelInfo';
+import About from './pages/About';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
             <Route path="/predict" element={<PredictPage />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/model-info" element={<ModelInfo />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         <Footer />

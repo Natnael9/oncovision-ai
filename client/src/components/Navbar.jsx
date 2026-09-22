@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: 'Predictor', path: '/predict' },
     { name: 'Our Science', path: '/how-it-works' },
     { name: 'Model Specs', path: '/model-info' },
+    { name: 'About', path: '/about' },
   ];
 
   const isActive = (path) => location.pathname === path;

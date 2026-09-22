@@ -39,6 +39,7 @@ const Footer = () => {
               <li><Link to="/predict" className="hover:text-[var(--accent-teal)] transition-colors">Interactive Predictor</Link></li>
               <li><Link to="/how-it-works" className="hover:text-[var(--accent-teal)] transition-colors">Our Science &amp; Pipeline</Link></li>
               <li><Link to="/model-info" className="hover:text-[var(--accent-teal)] transition-colors">Model Specifications</Link></li>
+              <li><Link to="/about" className="hover:text-[var(--accent-teal)] transition-colors">About the Creator</Link></li>
             </ul>
           </div>
 

@@ -1,0 +1,10 @@
+node_modules
+client/node_modules
+server/node_modules
+models/venv
+.git
+.gitignore
+.vscode
+.env
+client/dist
+

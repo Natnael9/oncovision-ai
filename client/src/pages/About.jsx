@@ -174,9 +174,12 @@ const About = () => {
               Midaso Edasa Busho
             </h1>
 
+            <p className="font-display text-sm sm:text-base font-semibold text-[var(--accent-teal)] tracking-wide">
+              AI &amp; Computational Biology Enthusiast | Full-Stack &amp; Embedded Systems Developer
+            </p>
+
             <p className="text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
-              AI enthusiast specializing in front-end development, hardware robotics, and applied machine learning.
-              Driven to engineer impactful technology solutions that improve lives.
+              High-achieving STEM student and developer specializing in computational biology, applied machine learning, and robotics. Driven to engineer impactful healthcare technology solutions that improve lives.
             </p>
 
             {/* Contact Pills */}
@@ -258,8 +261,8 @@ const About = () => {
           <h2 className="font-display text-xl sm:text-2xl font-bold text-white">Profile Summary</h2>
         </div>
         <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
-          AI enthusiast specializing in front-end development, with experience leading STEM projects at{' '}
-          <span className="text-[var(--accent-teal)] font-semibold">STEM CENTER</span>. Developed Arduino-based line follower systems and a high-accuracy machine-learning cancer detection application. Proficient in HTML, CSS, Python, and JavaScript, focused on innovative, high-impact solutions.
+          High-achieving STEM student (4.0 GPA, 1480 DSAT, International Math Olympiad Winner) and AI &amp; computational biology enthusiast. Combines quantitative modeling, front-end development, and machine learning to build impactful diagnostic solutions, including a 97.4% accurate breast cancer classification system. Proven leadership experience directing robotics initiatives and software development projects at{' '}
+          <span className="text-[var(--accent-teal)] font-semibold">STEM CENTER</span>.
         </p>
         <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
           Graduated with a perfect 4.0 GPA from ODA SBS and recognized internationally as a Mathematics Olympiad winner. Passionate about bridging theoretical computational science, embedded hardware systems, and intuitive user interfaces to solve real-world healthcare and engineering challenges.
